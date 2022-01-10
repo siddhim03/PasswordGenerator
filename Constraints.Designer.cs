@@ -268,6 +268,7 @@ namespace PasswordGenerator
             this.btnSubmit.TabIndex = 18;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // dgvQuestions
             // 
@@ -357,6 +358,7 @@ namespace PasswordGenerator
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Constraints";
             this.Text = "Constraints";
+            this.Load += new System.EventHandler(this.Constraints_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestions)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

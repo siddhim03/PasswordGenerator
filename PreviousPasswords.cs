@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace PasswordGenerator
 {
-    public partial class WelcomePage : Form
+    public partial class PreviousPasswords : Form
     {
-        public WelcomePage()
+        public PreviousPasswords()
         {
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnExitPrevPwrd_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-        private void WelcomePage_Load(object sender, EventArgs e)
+        private void PreviousPasswords_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
             this.setControls();
@@ -35,19 +35,6 @@ namespace PasswordGenerator
             this.MaximizeBox = false;
             this.MinimizeBox = false;
         }
-
-        private void btnGeneratePassword_Click(object sender, EventArgs e)
-        {
-            Constraints constraintsForm = new Constraints();
-
-            constraintsForm.ShowDialog();
-        }
-
-        private void btnPreviousPasswords_Click(object sender, EventArgs e)
-        {
-            PreviousPasswords prevPasswordsForm = new PreviousPasswords();
-
-            prevPasswordsForm.ShowDialog();
-        }
     }
+        
 }
