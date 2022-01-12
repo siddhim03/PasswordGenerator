@@ -29,9 +29,9 @@ namespace PasswordGenerator
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblPasswordConstraints = new System.Windows.Forms.Label();
             this.lblSymbols = new System.Windows.Forms.Label();
             this.rdoSymbolsYes = new System.Windows.Forms.RadioButton();
@@ -55,7 +55,13 @@ namespace PasswordGenerator
             this.colQuestion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAnswer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblAnswerQuestions = new System.Windows.Forms.Label();
+            this.panelNumbers = new System.Windows.Forms.Panel();
+            this.panelSymbols = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestions)).BeginInit();
+            this.panelNumbers.SuspendLayout();
+            this.panelSymbols.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblPasswordConstraints
@@ -83,7 +89,7 @@ namespace PasswordGenerator
             // 
             this.rdoSymbolsYes.AutoSize = true;
             this.rdoSymbolsYes.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoSymbolsYes.Location = new System.Drawing.Point(267, 63);
+            this.rdoSymbolsYes.Location = new System.Drawing.Point(11, 8);
             this.rdoSymbolsYes.Name = "rdoSymbolsYes";
             this.rdoSymbolsYes.Size = new System.Drawing.Size(58, 29);
             this.rdoSymbolsYes.TabIndex = 2;
@@ -95,7 +101,7 @@ namespace PasswordGenerator
             // 
             this.rdoSymbolsNo.AutoSize = true;
             this.rdoSymbolsNo.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoSymbolsNo.Location = new System.Drawing.Point(354, 63);
+            this.rdoSymbolsNo.Location = new System.Drawing.Point(98, 8);
             this.rdoSymbolsNo.Name = "rdoSymbolsNo";
             this.rdoSymbolsNo.Size = new System.Drawing.Size(56, 29);
             this.rdoSymbolsNo.TabIndex = 3;
@@ -107,7 +113,7 @@ namespace PasswordGenerator
             // 
             this.rdoNumbersNo.AutoSize = true;
             this.rdoNumbersNo.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoNumbersNo.Location = new System.Drawing.Point(354, 112);
+            this.rdoNumbersNo.Location = new System.Drawing.Point(98, 5);
             this.rdoNumbersNo.Name = "rdoNumbersNo";
             this.rdoNumbersNo.Size = new System.Drawing.Size(56, 29);
             this.rdoNumbersNo.TabIndex = 6;
@@ -119,7 +125,7 @@ namespace PasswordGenerator
             // 
             this.rdoNumbersYes.AutoSize = true;
             this.rdoNumbersYes.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoNumbersYes.Location = new System.Drawing.Point(267, 112);
+            this.rdoNumbersYes.Location = new System.Drawing.Point(11, 5);
             this.rdoNumbersYes.Name = "rdoNumbersYes";
             this.rdoNumbersYes.Size = new System.Drawing.Size(58, 29);
             this.rdoNumbersYes.TabIndex = 5;
@@ -161,7 +167,7 @@ namespace PasswordGenerator
             // 
             this.rdoMaxCharLengthNo.AutoSize = true;
             this.rdoMaxCharLengthNo.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoMaxCharLengthNo.Location = new System.Drawing.Point(354, 160);
+            this.rdoMaxCharLengthNo.Location = new System.Drawing.Point(98, 4);
             this.rdoMaxCharLengthNo.Name = "rdoMaxCharLengthNo";
             this.rdoMaxCharLengthNo.Size = new System.Drawing.Size(56, 29);
             this.rdoMaxCharLengthNo.TabIndex = 11;
@@ -173,7 +179,7 @@ namespace PasswordGenerator
             // 
             this.rdoMaxCharLengthYes.AutoSize = true;
             this.rdoMaxCharLengthYes.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoMaxCharLengthYes.Location = new System.Drawing.Point(267, 160);
+            this.rdoMaxCharLengthYes.Location = new System.Drawing.Point(11, 4);
             this.rdoMaxCharLengthYes.Name = "rdoMaxCharLengthYes";
             this.rdoMaxCharLengthYes.Size = new System.Drawing.Size(58, 29);
             this.rdoMaxCharLengthYes.TabIndex = 10;
@@ -272,36 +278,36 @@ namespace PasswordGenerator
             // 
             // dgvQuestions
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQuestions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQuestions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvQuestions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuestions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colQuestion,
             this.colAnswer});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQuestions.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQuestions.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvQuestions.Location = new System.Drawing.Point(17, 285);
             this.dgvQuestions.Name = "dgvQuestions";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQuestions.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQuestions.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvQuestions.Size = new System.Drawing.Size(760, 91);
             this.dgvQuestions.TabIndex = 19;
             // 
@@ -327,12 +333,42 @@ namespace PasswordGenerator
             this.lblAnswerQuestions.TabIndex = 20;
             this.lblAnswerQuestions.Text = "Answer the questions in the table:-";
             // 
+            // panelNumbers
+            // 
+            this.panelNumbers.Controls.Add(this.rdoNumbersYes);
+            this.panelNumbers.Controls.Add(this.rdoNumbersNo);
+            this.panelNumbers.Location = new System.Drawing.Point(256, 112);
+            this.panelNumbers.Name = "panelNumbers";
+            this.panelNumbers.Size = new System.Drawing.Size(167, 42);
+            this.panelNumbers.TabIndex = 22;
+            // 
+            // panelSymbols
+            // 
+            this.panelSymbols.Controls.Add(this.rdoSymbolsYes);
+            this.panelSymbols.Controls.Add(this.rdoSymbolsNo);
+            this.panelSymbols.Location = new System.Drawing.Point(256, 59);
+            this.panelSymbols.Name = "panelSymbols";
+            this.panelSymbols.Size = new System.Drawing.Size(167, 47);
+            this.panelSymbols.TabIndex = 23;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rdoMaxCharLengthYes);
+            this.panel1.Controls.Add(this.rdoMaxCharLengthNo);
+            this.panel1.Location = new System.Drawing.Point(256, 160);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(167, 39);
+            this.panel1.TabIndex = 23;
+            // 
             // Constraints
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelSymbols);
+            this.Controls.Add(this.panelNumbers);
             this.Controls.Add(this.lblAnswerQuestions);
             this.Controls.Add(this.dgvQuestions);
             this.Controls.Add(this.btnSubmit);
@@ -342,16 +378,10 @@ namespace PasswordGenerator
             this.Controls.Add(this.rdoWordsYes);
             this.Controls.Add(this.lblWords);
             this.Controls.Add(this.txtMaxCharLength);
-            this.Controls.Add(this.rdoMaxCharLengthNo);
-            this.Controls.Add(this.rdoMaxCharLengthYes);
             this.Controls.Add(this.lblMaxCharLength);
             this.Controls.Add(this.lblNumbersEg);
             this.Controls.Add(this.lblSymbolsEg);
-            this.Controls.Add(this.rdoNumbersNo);
-            this.Controls.Add(this.rdoNumbersYes);
             this.Controls.Add(this.lblNumbers);
-            this.Controls.Add(this.rdoSymbolsNo);
-            this.Controls.Add(this.rdoSymbolsYes);
             this.Controls.Add(this.lblSymbols);
             this.Controls.Add(this.lblPasswordConstraints);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -360,6 +390,12 @@ namespace PasswordGenerator
             this.Text = "Constraints";
             this.Load += new System.EventHandler(this.Constraints_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestions)).EndInit();
+            this.panelNumbers.ResumeLayout(false);
+            this.panelNumbers.PerformLayout();
+            this.panelSymbols.ResumeLayout(false);
+            this.panelSymbols.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,5 +426,8 @@ namespace PasswordGenerator
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuestion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAnswer;
         private System.Windows.Forms.Label lblAnswerQuestions;
+        private System.Windows.Forms.Panel panelNumbers;
+        private System.Windows.Forms.Panel panelSymbols;
+        private System.Windows.Forms.Panel panel1;
     }
 }

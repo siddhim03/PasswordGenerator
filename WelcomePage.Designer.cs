@@ -34,7 +34,6 @@ namespace PasswordGenerator
             this.btnGeneratePassword = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnPreviousPasswords = new System.Windows.Forms.Button();
-            this.maxCharNum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblPasswordGen
@@ -97,23 +96,12 @@ namespace PasswordGenerator
             this.btnPreviousPasswords.UseVisualStyleBackColor = false;
             this.btnPreviousPasswords.Click += new System.EventHandler(this.btnPreviousPasswords_Click);
             // 
-            // maxCharNum
-            // 
-            this.maxCharNum.AutoSize = true;
-            this.maxCharNum.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 16F);
-            this.maxCharNum.Location = new System.Drawing.Point(30, 193);
-            this.maxCharNum.Name = "maxCharNum";
-            this.maxCharNum.Size = new System.Drawing.Size(153, 30);
-            this.maxCharNum.TabIndex = 5;
-            this.maxCharNum.Text = "max char num";
-            // 
             // WelcomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.maxCharNum);
             this.Controls.Add(this.btnPreviousPasswords);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnGeneratePassword);
@@ -134,7 +122,6 @@ namespace PasswordGenerator
         private System.Windows.Forms.Button btnGeneratePassword;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnPreviousPasswords;
-        private System.Windows.Forms.Label maxCharNum;
     }
 }
 

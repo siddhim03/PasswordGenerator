@@ -41,10 +41,28 @@ namespace PasswordGenerator
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            this.initializeMyGroupBox();
             this.constraintsMethod();
             this.Dispose();
         }
 
+        private void initializeMyGroupBox()
+        {
+            // Create and initialize a GroupBox
+            Panel panelSymbols = new Panel();
+            Panel panelNumbers = new Panel();
+
+            // Add the radio button to the GroupBox.
+            panelSymbols.Controls.Add(rdoSymbolsYes);
+            panelSymbols.Controls.Add(rdoSymbolsNo);
+
+            panelNumbers.Controls.Add(rdoNumbersYes);
+            panelNumbers.Controls.Add(rdoNumbersNo);
+
+            // Add the GroupBox to the Form.
+            Controls.Add(panelSymbols);
+            Controls.Add(panelNumbers);
+        }
         private void constraintsMethod()
         {
             if(rdoSymbolsYes.Checked)
@@ -64,11 +82,5 @@ namespace PasswordGenerator
             }
         }
 
-        private void txtMaxCharLength_TextChanged(object sender, EventArgs e)
-        {
-            TextWriter txt = new StreamWriter("C:\\siddhi\\PasswordGenerator\\txt files\\maxCharacterNumber.txt");
-            txt.Write(txtMaxCharLength.Text);
-            txt.Close();
-        }
     }
 }
