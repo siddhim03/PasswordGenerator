@@ -14,10 +14,13 @@ namespace PasswordGenerator
     public partial class Constraints : Form
     {
         //variables
-        private bool symbols = false;
-        private bool numbers = false;
-        private bool maxCharLength = false;
-        private string maxCharNum = "";
+        private string inputSymbols;
+        private string inputNumbers;
+        private string inputMaxChar;
+        private string inputWords;
+        private int maxCharValue;
+        private int maxWordValue;
+
 
         //methods
         public Constraints()
@@ -42,7 +45,10 @@ namespace PasswordGenerator
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             this.initializeMyGroupBox();
-            this.constraintsMethod();
+
+            if (!this.constraintsMethod())
+                return;
+            
             this.Dispose();
         }
 
@@ -51,6 +57,8 @@ namespace PasswordGenerator
             // Create and initialize a GroupBox
             Panel panelSymbols = new Panel();
             Panel panelNumbers = new Panel();
+            Panel panelMaxChar = new Panel();
+            Panel panelWords = new Panel();
 
             // Add the radio button to the GroupBox.
             panelSymbols.Controls.Add(rdoSymbolsYes);
@@ -59,27 +67,97 @@ namespace PasswordGenerator
             panelNumbers.Controls.Add(rdoNumbersYes);
             panelNumbers.Controls.Add(rdoNumbersNo);
 
+            panelMaxChar.Controls.Add(rdoMaxCharLengthYes);
+            panelMaxChar.Controls.Add(rdoMaxCharLengthNo);
+
+            panelWords.Controls.Add(rdoWordsYes);
+            panelWords.Controls.Add(rdoWordsNo);
+
             // Add the GroupBox to the Form.
             Controls.Add(panelSymbols);
             Controls.Add(panelNumbers);
+            Controls.Add(panelMaxChar);
+            Controls.Add(panelWords);
         }
-        private void constraintsMethod()
+
+        private bool constraintsMethod()
         {
-            if(rdoSymbolsYes.Checked)
+            this.storeSymbolsNubmers();
+
+            if (!this.storeMaxChar())
+                return false;
+
+            if (!this.storeWords())
+                return false;
+
+            return true;
+        }
+
+        private void storeSymbolsNubmers()
+        {
+            if (rdoSymbolsYes.Checked == true)
             {
-                this.symbols = true;
+                inputSymbols = rdoSymbolsYes.Text;
             }
 
-            else if (rdoNumbersYes.Checked)
+            if (rdoNumbersYes.Checked == true)
             {
-                this.numbers = true;
+                inputNumbers = rdoNumbersYes.Text;
+            }
+        }
+
+        private bool storeMaxChar()
+        {
+            if (rdoMaxCharLengthYes.Checked == true)
+            {
+                inputMaxChar = rdoMaxCharLengthYes.Text;
+
+                if (String.Equals(inputMaxChar, " "))
+                {
+                    // The text box isn't a valid number - tell the user!
+                    MessageBox.Show("Please enter a valid number!");
+                    return false;
+                }
+
+                else if (String.Equals(inputMaxChar, "Yes"))
+                {
+                    if (!Int32.TryParse(txtMaxCharLength.Text, out maxCharValue))
+                    {
+                        // The text box isn't a valid number - tell the user!
+                        MessageBox.Show("Please enter a valid number!");
+                        return false;
+                    }
+                }
             }
 
-            else if (rdoMaxCharLengthYes.Checked)
-            {
-                this.maxCharLength = true;
+            return true;
+        }
 
+        private bool storeWords()
+        {
+            if (rdoWordsYes.Checked == true)
+            {
+                inputWords = rdoWordsYes.Text;
+
+                if (String.Equals(inputWords, " "))
+                {
+                    // The text box isn't a valid number - tell the user!
+                    MessageBox.Show("Please enter a valid number!");
+                    return false;
+                }
+
+                else if (String.Equals(inputWords, "Yes"))
+                {
+                    if (!Int32.TryParse(txtMaxCharLength.Text, out maxWordValue))
+                    {
+                        // The text box isn't a valid number - tell the user!
+                        MessageBox.Show("Please enter a valid number!");
+                        return false;
+                    }
+                }
             }
+
+            return true;
         }
 
     }
