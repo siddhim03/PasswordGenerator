@@ -50,22 +50,22 @@ namespace PasswordGenerator
             this.lblWords = new System.Windows.Forms.Label();
             this.lblWordsHowMany = new System.Windows.Forms.Label();
             this.txtWordsHowMany = new System.Windows.Forms.TextBox();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.dgvQuestions = new System.Windows.Forms.DataGridView();
-            this.colQuestion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAnswer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblAnswerQuestions = new System.Windows.Forms.Label();
+            this.btnSubmitCon = new System.Windows.Forms.Button();
             this.panelNumbers = new System.Windows.Forms.Panel();
             this.panelSymbols = new System.Windows.Forms.Panel();
             this.panelMaxChar = new System.Windows.Forms.Panel();
             this.panelWords = new System.Windows.Forms.Panel();
             this.lblMaxCharEg = new System.Windows.Forms.Label();
             this.lblWordsEg = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQuestions)).BeginInit();
+            this.colAnswer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQuestion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvQuestionsCon = new System.Windows.Forms.DataGridView();
+            this.btnQandA = new System.Windows.Forms.Button();
             this.panelNumbers.SuspendLayout();
             this.panelSymbols.SuspendLayout();
             this.panelMaxChar.SuspendLayout();
             this.panelWords.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuestionsCon)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPasswordConstraints
@@ -265,75 +265,18 @@ namespace PasswordGenerator
             this.txtWordsHowMany.Size = new System.Drawing.Size(166, 29);
             this.txtWordsHowMany.TabIndex = 17;
             // 
-            // btnSubmit
+            // btnSubmitCon
             // 
-            this.btnSubmit.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnSubmit.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(354, 393);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(112, 45);
-            this.btnSubmit.TabIndex = 18;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // dgvQuestions
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQuestions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvQuestions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuestions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colQuestion,
-            this.colAnswer});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQuestions.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvQuestions.Location = new System.Drawing.Point(17, 285);
-            this.dgvQuestions.Name = "dgvQuestions";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQuestions.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvQuestions.Size = new System.Drawing.Size(760, 91);
-            this.dgvQuestions.TabIndex = 19;
-            // 
-            // colQuestion
-            // 
-            this.colQuestion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colQuestion.HeaderText = "Question";
-            this.colQuestion.Name = "colQuestion";
-            // 
-            // colAnswer
-            // 
-            this.colAnswer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colAnswer.HeaderText = "Answer";
-            this.colAnswer.Name = "colAnswer";
-            // 
-            // lblAnswerQuestions
-            // 
-            this.lblAnswerQuestions.AutoSize = true;
-            this.lblAnswerQuestions.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnswerQuestions.Location = new System.Drawing.Point(15, 257);
-            this.lblAnswerQuestions.Name = "lblAnswerQuestions";
-            this.lblAnswerQuestions.Size = new System.Drawing.Size(310, 25);
-            this.lblAnswerQuestions.TabIndex = 20;
-            this.lblAnswerQuestions.Text = "Answer the questions in the table:-";
+            this.btnSubmitCon.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSubmitCon.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmitCon.ForeColor = System.Drawing.Color.White;
+            this.btnSubmitCon.Location = new System.Drawing.Point(340, 393);
+            this.btnSubmitCon.Name = "btnSubmitCon";
+            this.btnSubmitCon.Size = new System.Drawing.Size(112, 45);
+            this.btnSubmitCon.TabIndex = 18;
+            this.btnSubmitCon.Text = "Submit";
+            this.btnSubmitCon.UseVisualStyleBackColor = false;
+            this.btnSubmitCon.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // panelNumbers
             // 
@@ -391,21 +334,81 @@ namespace PasswordGenerator
             this.lblWordsEg.TabIndex = 26;
             this.lblWordsEg.Text = "Enter amount here";
             // 
+            // colAnswer
+            // 
+            this.colAnswer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colAnswer.HeaderText = "Answer";
+            this.colAnswer.Name = "colAnswer";
+            // 
+            // colQuestion
+            // 
+            this.colQuestion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colQuestion.HeaderText = "Question";
+            this.colQuestion.Name = "colQuestion";
+            // 
+            // dgvQuestionsCon
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQuestionsCon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvQuestionsCon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQuestionsCon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colQuestion,
+            this.colAnswer});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQuestionsCon.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvQuestionsCon.Location = new System.Drawing.Point(17, 312);
+            this.dgvQuestionsCon.Name = "dgvQuestionsCon";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQuestionsCon.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvQuestionsCon.Size = new System.Drawing.Size(760, 75);
+            this.dgvQuestionsCon.TabIndex = 19;
+            // 
+            // btnQandA
+            // 
+            this.btnQandA.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnQandA.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQandA.ForeColor = System.Drawing.Color.White;
+            this.btnQandA.Location = new System.Drawing.Point(17, 269);
+            this.btnQandA.Name = "btnQandA";
+            this.btnQandA.Size = new System.Drawing.Size(760, 37);
+            this.btnQandA.TabIndex = 27;
+            this.btnQandA.Text = "Go to Questions and Answers";
+            this.btnQandA.UseVisualStyleBackColor = false;
+            this.btnQandA.Click += new System.EventHandler(this.btnQandA_Click);
+            // 
             // Constraints
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnQandA);
             this.Controls.Add(this.lblWordsEg);
             this.Controls.Add(this.lblMaxCharEg);
             this.Controls.Add(this.panelWords);
             this.Controls.Add(this.panelMaxChar);
             this.Controls.Add(this.panelSymbols);
             this.Controls.Add(this.panelNumbers);
-            this.Controls.Add(this.lblAnswerQuestions);
-            this.Controls.Add(this.dgvQuestions);
-            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.dgvQuestionsCon);
+            this.Controls.Add(this.btnSubmitCon);
             this.Controls.Add(this.txtWordsHowMany);
             this.Controls.Add(this.lblWordsHowMany);
             this.Controls.Add(this.lblWords);
@@ -421,7 +424,6 @@ namespace PasswordGenerator
             this.Name = "Constraints";
             this.Text = "Constraints";
             this.Load += new System.EventHandler(this.Constraints_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQuestions)).EndInit();
             this.panelNumbers.ResumeLayout(false);
             this.panelNumbers.PerformLayout();
             this.panelSymbols.ResumeLayout(false);
@@ -430,6 +432,7 @@ namespace PasswordGenerator
             this.panelMaxChar.PerformLayout();
             this.panelWords.ResumeLayout(false);
             this.panelWords.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuestionsCon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,16 +458,16 @@ namespace PasswordGenerator
         private System.Windows.Forms.Label lblWords;
         private System.Windows.Forms.Label lblWordsHowMany;
         private System.Windows.Forms.TextBox txtWordsHowMany;
-        private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.DataGridView dgvQuestions;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colQuestion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAnswer;
-        private System.Windows.Forms.Label lblAnswerQuestions;
+        private System.Windows.Forms.Button btnSubmitCon;
         private System.Windows.Forms.Panel panelNumbers;
         private System.Windows.Forms.Panel panelSymbols;
         private System.Windows.Forms.Panel panelMaxChar;
         private System.Windows.Forms.Panel panelWords;
         private System.Windows.Forms.Label lblMaxCharEg;
         private System.Windows.Forms.Label lblWordsEg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAnswer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colQuestion;
+        private System.Windows.Forms.DataGridView dgvQuestionsCon;
+        private System.Windows.Forms.Button btnQandA;
     }
 }

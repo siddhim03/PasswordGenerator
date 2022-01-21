@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PasswordGenerator.Models;
+using System;
 using System.Windows.Forms;
 
 namespace PasswordGenerator
@@ -20,7 +13,6 @@ namespace PasswordGenerator
         private string inputWords;
         private int maxCharValue;
         private int maxWordValue;
-
 
         //methods
         public Constraints()
@@ -42,43 +34,43 @@ namespace PasswordGenerator
             this.MinimizeBox = false;
         }
 
+        private void btnQandA_Click(object sender, EventArgs e)
+        {
+            WordQuestionsAnswers questionForm = new WordQuestionsAnswers();
+
+            questionForm.ShowDialog();
+        }
+
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             this.initializeMyGroupBox();
 
             if (!this.constraintsMethod())
                 return;
+
+            if (!this.checkInformation())
+                return;
             
             this.Dispose();
+
         }
 
         private void initializeMyGroupBox()
         {
-            // Create and initialize a GroupBox
-            Panel panelSymbols = new Panel();
-            Panel panelNumbers = new Panel();
-            Panel panelMaxChar = new Panel();
-            Panel panelWords = new Panel();
+            //Add radio buttons to Panel
+            this.panelSymbols.Controls.Add(rdoSymbolsYes);
+            this.panelSymbols.Controls.Add(rdoSymbolsNo);
 
-            // Add the radio button to the GroupBox.
-            panelSymbols.Controls.Add(rdoSymbolsYes);
-            panelSymbols.Controls.Add(rdoSymbolsNo);
+            this.panelNumbers.Controls.Add(rdoNumbersYes);
+            this.panelNumbers.Controls.Add(rdoNumbersNo);
 
-            panelNumbers.Controls.Add(rdoNumbersYes);
-            panelNumbers.Controls.Add(rdoNumbersNo);
+            this.panelMaxChar.Controls.Add(rdoMaxCharLengthYes);
+            this.panelMaxChar.Controls.Add(rdoMaxCharLengthNo);
 
-            panelMaxChar.Controls.Add(rdoMaxCharLengthYes);
-            panelMaxChar.Controls.Add(rdoMaxCharLengthNo);
-
-            panelWords.Controls.Add(rdoWordsYes);
-            panelWords.Controls.Add(rdoWordsNo);
-
-            // Add the GroupBox to the Form.
-            Controls.Add(panelSymbols);
-            Controls.Add(panelNumbers);
-            Controls.Add(panelMaxChar);
-            Controls.Add(panelWords);
-        }
+            this.panelWords.Controls.Add(rdoWordsYes);
+            this.panelWords.Controls.Add(rdoWordsNo);
+        }        
 
         private bool constraintsMethod()
         {
@@ -111,20 +103,23 @@ namespace PasswordGenerator
             if (rdoMaxCharLengthYes.Checked == true)
             {
                 inputMaxChar = rdoMaxCharLengthYes.Text;
+                string smsg = "Please enter a valid numeric length!";
 
                 if (String.Equals(inputMaxChar, " "))
                 {
                     // The text box isn't a valid number - tell the user!
-                    MessageBox.Show("Please enter a valid number!");
+                    MessageBox.Show(smsg, TitlesModel.MessageBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.txtMaxCharLength.Focus();
                     return false;
                 }
 
                 else if (String.Equals(inputMaxChar, "Yes"))
                 {
-                    if (!Int32.TryParse(txtMaxCharLength.Text, out maxCharValue))
+                    if (!Int32.TryParse(this.txtMaxCharLength.Text, out maxCharValue))
                     {
                         // The text box isn't a valid number - tell the user!
-                        MessageBox.Show("Please enter a valid number!");
+                        MessageBox.Show(smsg, TitlesModel.MessageBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        this.txtMaxCharLength.Focus();
                         return false;
                     }
                 }
@@ -138,26 +133,44 @@ namespace PasswordGenerator
             if (rdoWordsYes.Checked == true)
             {
                 inputWords = rdoWordsYes.Text;
+                string smsg = "Please enter a number value for amount of words!";
 
                 if (String.Equals(inputWords, " "))
                 {
                     // The text box isn't a valid number - tell the user!
-                    MessageBox.Show("Please enter a valid number!");
+                    MessageBox.Show(smsg, TitlesModel.MessageBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.txtWordsHowMany.Focus();
                     return false;
                 }
 
                 else if (String.Equals(inputWords, "Yes"))
                 {
-                    if (!Int32.TryParse(txtMaxCharLength.Text, out maxWordValue))
+                    if (!Int32.TryParse(this.txtWordsHowMany.Text, out maxWordValue))
                     {
                         // The text box isn't a valid number - tell the user!
-                        MessageBox.Show("Please enter a valid number!");
+                        MessageBox.Show(smsg, TitlesModel.MessageBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        this.txtWordsHowMany.Focus();
                         return false;
                     }
                 }
             }
 
             return true;
+        }
+
+        private bool checkInformation()
+        {
+            DialogResult dialogResult = MessageBox.Show("Is all the information correct?", "Password Generator", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                return true;
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return false;
+            }
+
+            return false;
         }
 
     }
