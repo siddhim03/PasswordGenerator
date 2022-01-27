@@ -29,111 +29,179 @@ namespace PasswordGenerator
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblWordQuestion = new System.Windows.Forms.Label();
-            this.lblAnswerQuestionsQA = new System.Windows.Forms.Label();
-            this.dgvQuestionsQA = new System.Windows.Forms.DataGridView();
-            this.colQuestion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAnswer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSubmitQA = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQuestionsQA)).BeginInit();
+            this.lblQuestion1 = new System.Windows.Forms.Label();
+            this.lblQuestion2 = new System.Windows.Forms.Label();
+            this.lblQuestion3 = new System.Windows.Forms.Label();
+            this.lblQuestion4 = new System.Windows.Forms.Label();
+            this.lblQuestion5 = new System.Windows.Forms.Label();
+            this.txtAnswer1 = new System.Windows.Forms.TextBox();
+            this.txtAnswer2 = new System.Windows.Forms.TextBox();
+            this.txtAnswer3 = new System.Windows.Forms.TextBox();
+            this.txtAnswer4 = new System.Windows.Forms.TextBox();
+            this.txtAnswer5 = new System.Windows.Forms.TextBox();
+            this.btnGenerateQuestions = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblWordQuestion
             // 
             this.lblWordQuestion.AutoSize = true;
             this.lblWordQuestion.Font = new System.Drawing.Font("Vivaldi", 30F);
-            this.lblWordQuestion.Location = new System.Drawing.Point(236, 9);
+            this.lblWordQuestion.Location = new System.Drawing.Point(190, 9);
             this.lblWordQuestion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWordQuestion.Name = "lblWordQuestion";
             this.lblWordQuestion.Size = new System.Drawing.Size(324, 47);
             this.lblWordQuestion.TabIndex = 1;
             this.lblWordQuestion.Text = "Questions and Answers";
             // 
-            // lblAnswerQuestionsQA
-            // 
-            this.lblAnswerQuestionsQA.AutoSize = true;
-            this.lblAnswerQuestionsQA.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnswerQuestionsQA.Location = new System.Drawing.Point(41, 86);
-            this.lblAnswerQuestionsQA.Name = "lblAnswerQuestionsQA";
-            this.lblAnswerQuestionsQA.Size = new System.Drawing.Size(310, 25);
-            this.lblAnswerQuestionsQA.TabIndex = 21;
-            this.lblAnswerQuestionsQA.Text = "Answer the questions in the table:-";
-            // 
-            // dgvQuestionsQA
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQuestionsQA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvQuestionsQA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuestionsQA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colQuestion,
-            this.colAnswer});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQuestionsQA.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvQuestionsQA.Location = new System.Drawing.Point(12, 126);
-            this.dgvQuestionsQA.Name = "dgvQuestionsQA";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQuestionsQA.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvQuestionsQA.Size = new System.Drawing.Size(776, 235);
-            this.dgvQuestionsQA.TabIndex = 22;
-            // 
-            // colQuestion
-            // 
-            this.colQuestion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colQuestion.HeaderText = "Question";
-            this.colQuestion.Name = "colQuestion";
-            // 
-            // colAnswer
-            // 
-            this.colAnswer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colAnswer.HeaderText = "Answer";
-            this.colAnswer.Name = "colAnswer";
-            // 
             // btnSubmitQA
             // 
             this.btnSubmitQA.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnSubmitQA.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitQA.ForeColor = System.Drawing.Color.White;
-            this.btnSubmitQA.Location = new System.Drawing.Point(345, 393);
+            this.btnSubmitQA.Location = new System.Drawing.Point(287, 393);
             this.btnSubmitQA.Name = "btnSubmitQA";
             this.btnSubmitQA.Size = new System.Drawing.Size(112, 45);
             this.btnSubmitQA.TabIndex = 23;
             this.btnSubmitQA.Text = "Submit";
             this.btnSubmitQA.UseVisualStyleBackColor = false;
             // 
+            // lblQuestion1
+            // 
+            this.lblQuestion1.AutoSize = true;
+            this.lblQuestion1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion1.Location = new System.Drawing.Point(12, 143);
+            this.lblQuestion1.Name = "lblQuestion1";
+            this.lblQuestion1.Size = new System.Drawing.Size(102, 25);
+            this.lblQuestion1.TabIndex = 24;
+            this.lblQuestion1.Text = "Question 1";
+            // 
+            // lblQuestion2
+            // 
+            this.lblQuestion2.AutoSize = true;
+            this.lblQuestion2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion2.Location = new System.Drawing.Point(12, 186);
+            this.lblQuestion2.Name = "lblQuestion2";
+            this.lblQuestion2.Size = new System.Drawing.Size(105, 25);
+            this.lblQuestion2.TabIndex = 25;
+            this.lblQuestion2.Text = "Question 2";
+            // 
+            // lblQuestion3
+            // 
+            this.lblQuestion3.AutoSize = true;
+            this.lblQuestion3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion3.Location = new System.Drawing.Point(12, 230);
+            this.lblQuestion3.Name = "lblQuestion3";
+            this.lblQuestion3.Size = new System.Drawing.Size(105, 25);
+            this.lblQuestion3.TabIndex = 26;
+            this.lblQuestion3.Text = "Question 3";
+            // 
+            // lblQuestion4
+            // 
+            this.lblQuestion4.AutoSize = true;
+            this.lblQuestion4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion4.Location = new System.Drawing.Point(12, 275);
+            this.lblQuestion4.Name = "lblQuestion4";
+            this.lblQuestion4.Size = new System.Drawing.Size(105, 25);
+            this.lblQuestion4.TabIndex = 27;
+            this.lblQuestion4.Text = "Question 4";
+            // 
+            // lblQuestion5
+            // 
+            this.lblQuestion5.AutoSize = true;
+            this.lblQuestion5.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion5.Location = new System.Drawing.Point(12, 319);
+            this.lblQuestion5.Name = "lblQuestion5";
+            this.lblQuestion5.Size = new System.Drawing.Size(105, 25);
+            this.lblQuestion5.TabIndex = 28;
+            this.lblQuestion5.Text = "Question 5";
+            // 
+            // txtAnswer1
+            // 
+            this.txtAnswer1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAnswer1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswer1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtAnswer1.Location = new System.Drawing.Point(358, 139);
+            this.txtAnswer1.Name = "txtAnswer1";
+            this.txtAnswer1.Size = new System.Drawing.Size(327, 29);
+            this.txtAnswer1.TabIndex = 29;
+            // 
+            // txtAnswer2
+            // 
+            this.txtAnswer2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAnswer2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswer2.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtAnswer2.Location = new System.Drawing.Point(358, 182);
+            this.txtAnswer2.Name = "txtAnswer2";
+            this.txtAnswer2.Size = new System.Drawing.Size(327, 29);
+            this.txtAnswer2.TabIndex = 30;
+            // 
+            // txtAnswer3
+            // 
+            this.txtAnswer3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAnswer3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswer3.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtAnswer3.Location = new System.Drawing.Point(358, 226);
+            this.txtAnswer3.Name = "txtAnswer3";
+            this.txtAnswer3.Size = new System.Drawing.Size(327, 29);
+            this.txtAnswer3.TabIndex = 31;
+            // 
+            // txtAnswer4
+            // 
+            this.txtAnswer4.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAnswer4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswer4.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtAnswer4.Location = new System.Drawing.Point(358, 275);
+            this.txtAnswer4.Name = "txtAnswer4";
+            this.txtAnswer4.Size = new System.Drawing.Size(327, 29);
+            this.txtAnswer4.TabIndex = 32;
+            // 
+            // txtAnswer5
+            // 
+            this.txtAnswer5.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAnswer5.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswer5.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtAnswer5.Location = new System.Drawing.Point(358, 319);
+            this.txtAnswer5.Name = "txtAnswer5";
+            this.txtAnswer5.Size = new System.Drawing.Size(327, 29);
+            this.txtAnswer5.TabIndex = 33;
+            // 
+            // btnGenerateQuestions
+            // 
+            this.btnGenerateQuestions.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnGenerateQuestions.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateQuestions.ForeColor = System.Drawing.Color.White;
+            this.btnGenerateQuestions.Location = new System.Drawing.Point(12, 69);
+            this.btnGenerateQuestions.Name = "btnGenerateQuestions";
+            this.btnGenerateQuestions.Size = new System.Drawing.Size(673, 49);
+            this.btnGenerateQuestions.TabIndex = 34;
+            this.btnGenerateQuestions.Text = "Click to Generate Questions";
+            this.btnGenerateQuestions.UseVisualStyleBackColor = false;
+            this.btnGenerateQuestions.Click += new System.EventHandler(this.btnGenerateQuestions_Click);
+            // 
             // WordQuestionsAnswers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(697, 450);
+            this.Controls.Add(this.btnGenerateQuestions);
+            this.Controls.Add(this.txtAnswer5);
+            this.Controls.Add(this.txtAnswer4);
+            this.Controls.Add(this.txtAnswer3);
+            this.Controls.Add(this.txtAnswer2);
+            this.Controls.Add(this.txtAnswer1);
+            this.Controls.Add(this.lblQuestion5);
+            this.Controls.Add(this.lblQuestion4);
+            this.Controls.Add(this.lblQuestion3);
+            this.Controls.Add(this.lblQuestion2);
+            this.Controls.Add(this.lblQuestion1);
             this.Controls.Add(this.btnSubmitQA);
-            this.Controls.Add(this.dgvQuestionsQA);
-            this.Controls.Add(this.lblAnswerQuestionsQA);
             this.Controls.Add(this.lblWordQuestion);
             this.Name = "WordQuestionsAnswers";
             this.Text = "WordQuestionsAnswers";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQuestionsQA)).EndInit();
+            this.Load += new System.EventHandler(this.WordQuestionsAnswers_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,10 +210,17 @@ namespace PasswordGenerator
         #endregion
 
         private System.Windows.Forms.Label lblWordQuestion;
-        private System.Windows.Forms.Label lblAnswerQuestionsQA;
-        private System.Windows.Forms.DataGridView dgvQuestionsQA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colQuestion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAnswer;
         private System.Windows.Forms.Button btnSubmitQA;
+        private System.Windows.Forms.Label lblQuestion1;
+        private System.Windows.Forms.Label lblQuestion2;
+        private System.Windows.Forms.Label lblQuestion3;
+        private System.Windows.Forms.Label lblQuestion4;
+        private System.Windows.Forms.Label lblQuestion5;
+        private System.Windows.Forms.TextBox txtAnswer1;
+        private System.Windows.Forms.TextBox txtAnswer2;
+        private System.Windows.Forms.TextBox txtAnswer3;
+        private System.Windows.Forms.TextBox txtAnswer4;
+        private System.Windows.Forms.TextBox txtAnswer5;
+        private System.Windows.Forms.Button btnGenerateQuestions;
     }
 }

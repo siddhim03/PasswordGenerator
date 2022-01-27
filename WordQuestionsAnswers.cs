@@ -17,5 +17,19 @@ namespace PasswordGenerator
             InitializeComponent();
         }
 
+        private void WordQuestionsAnswers_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+        }
+
+        private void makeList()
+        {
+
+        }
+
+        private void btnGenerateQuestions_Click(object sender, EventArgs e)
+        {
+            lblQuestion1.Text = "Hi";
+        }
     }
 }

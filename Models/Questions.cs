@@ -8,6 +8,16 @@ namespace PasswordGenerator.Models
 {
     public class Questions
     {
-        public string wordQuestion { get; }
+        public string question;
+
+        public string getQuestion()
+        {
+            return this.question;
+        }
+
+        static void Main(string[] args)
+        {
+            List<Questions> lstQuestions = new List<Questions>();
+        }
     }
 }
