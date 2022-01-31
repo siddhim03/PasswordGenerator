@@ -61,6 +61,7 @@ namespace PasswordGenerator
             this.colQuestion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvQuestionsCon = new System.Windows.Forms.DataGridView();
             this.btnQandA = new System.Windows.Forms.Button();
+            this.lblWord = new System.Windows.Forms.Label();
             this.panelNumbers.SuspendLayout();
             this.panelSymbols.SuspendLayout();
             this.panelMaxChar.SuspendLayout();
@@ -260,7 +261,7 @@ namespace PasswordGenerator
             this.txtWordsHowMany.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtWordsHowMany.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWordsHowMany.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtWordsHowMany.Location = new System.Drawing.Point(567, 218);
+            this.txtWordsHowMany.Location = new System.Drawing.Point(567, 234);
             this.txtWordsHowMany.Name = "txtWordsHowMany";
             this.txtWordsHowMany.Size = new System.Drawing.Size(166, 29);
             this.txtWordsHowMany.TabIndex = 17;
@@ -394,12 +395,23 @@ namespace PasswordGenerator
             this.btnQandA.UseVisualStyleBackColor = false;
             this.btnQandA.Click += new System.EventHandler(this.btnQandA_Click);
             // 
+            // lblWord
+            // 
+            this.lblWord.AutoSize = true;
+            this.lblWord.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWord.Location = new System.Drawing.Point(564, 221);
+            this.lblWord.Name = "lblWord";
+            this.lblWord.Size = new System.Drawing.Size(221, 13);
+            this.lblWord.TabIndex = 28;
+            this.lblWord.Text = "if you answer with 0, it defaults to 2 words";
+            // 
             // Constraints
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblWord);
             this.Controls.Add(this.btnQandA);
             this.Controls.Add(this.lblWordsEg);
             this.Controls.Add(this.lblMaxCharEg);
@@ -469,5 +481,6 @@ namespace PasswordGenerator
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuestion;
         private System.Windows.Forms.DataGridView dgvQuestionsCon;
         private System.Windows.Forms.Button btnQandA;
+        private System.Windows.Forms.Label lblWord;
     }
 }

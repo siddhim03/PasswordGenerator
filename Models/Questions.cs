@@ -15,9 +15,5 @@ namespace PasswordGenerator.Models
             return this.question;
         }
 
-        static void Main(string[] args)
-        {
-            List<Questions> lstQuestions = new List<Questions>();
-        }
     }
 }

@@ -12,7 +12,7 @@ namespace PasswordGenerator
         private string inputMaxChar;
         private string inputWords;
         private int maxCharValue;
-        private int maxWordValue;
+        public int maxWordValue;
 
         //methods
         public Constraints()
@@ -24,6 +24,7 @@ namespace PasswordGenerator
         {
             this.CenterToScreen();
             this.setControls();
+            btnSubmitCon.Visible = false;
         }
 
         private void setControls()
@@ -38,7 +39,11 @@ namespace PasswordGenerator
         {
             WordQuestionsAnswers questionForm = new WordQuestionsAnswers();
 
+            questionForm.maxWordValue = this.maxWordValue;
+
             questionForm.ShowDialog();
+
+            btnSubmitCon.Visible = true;
         }
 
 
@@ -128,7 +133,7 @@ namespace PasswordGenerator
             return true;
         }
 
-        private bool storeWords()
+        public bool storeWords()
         {
             if (rdoWordsYes.Checked == true)
             {
