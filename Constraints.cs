@@ -12,7 +12,7 @@ namespace PasswordGenerator
         private string inputMaxChar;
         private string inputWords;
         private int maxCharValue;
-        public int maxWordValue;
+        public int maxWordValue = 0;
 
         //methods
         public Constraints()
