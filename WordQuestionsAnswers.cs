@@ -56,29 +56,29 @@ namespace PasswordGenerator
             };
 
         public string[] lstQuestions2 =
-            {   "What did you eat today?",
-                "What's your favorite color",
-                "First animal you can think of?",
-                "Favorite ice cream flavor?",
-                "What color is your hair?",
-                "Birthday month?",
-                "What's your first pet's name?",
-                "Somewhere you want to visit?",
-                "Your most used brand?",
-                "A word to describe your personality?"
+            {   "What’s the first thing you grab for in the morning?",
+                "Cats or dogs or neither?",
+                "Beaches or snow?",
+                "Favorite music artist?",
+                "Who's your celebrity crush?",
+                "Your favorite hobby?",
+                "What's one thing you could do all day?",
+                "Your favorite animal?",
+                "Your favorite day of the week?",
+                "What's your mood when you wake up?"
             };
 
         public string[] lstQuestions3 =
-            {   "What did you eat today?",
-                "What's your favorite color",
-                "First animal you can think of?",
-                "Favorite ice cream flavor?",
-                "What color is your hair?",
-                "Birthday month?",
-                "What's your first pet's name?",
-                "Somewhere you want to visit?",
-                "Your most used brand?",
-                "A word to describe your personality?"
+            {   "One thing you love about Summer",
+                "One thing you love about Winter",
+                "One thing you love about Fall",
+                "One thing you love about Spring",
+                "What's a place you would visit again?",
+                "Your role model?",
+                "Your favorite meal of the day?",
+                "What's a language you would want to learn?",
+                "What's a skill you think everyone should know?",
+                "What's your favorite part of the house?"
             };
 
         public string[] lstQuestions4 =

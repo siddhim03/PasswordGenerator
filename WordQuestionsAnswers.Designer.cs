@@ -186,11 +186,11 @@ namespace PasswordGenerator
             // 
             this.lblQandA.AutoSize = true;
             this.lblQandA.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F);
-            this.lblQandA.Location = new System.Drawing.Point(246, 130);
+            this.lblQandA.Location = new System.Drawing.Point(61, 121);
             this.lblQandA.Name = "lblQandA";
-            this.lblQandA.Size = new System.Drawing.Size(191, 21);
+            this.lblQandA.Size = new System.Drawing.Size(577, 21);
             this.lblQandA.TabIndex = 36;
-            this.lblQandA.Text = "no spaces in your answer";
+            this.lblQandA.Text = "one word answers are preferable but no spaces if they\'re more than one word";
             // 
             // WordQuestionsAnswers
             // 

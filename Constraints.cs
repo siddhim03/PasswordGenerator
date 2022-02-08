@@ -39,6 +39,8 @@ namespace PasswordGenerator
         {
             WordQuestionsAnswers questionForm = new WordQuestionsAnswers();
 
+            this.storeWords();
+
             questionForm.maxWordValue = this.maxWordValue;
 
             questionForm.ShowDialog();
@@ -150,7 +152,9 @@ namespace PasswordGenerator
 
                 else if (String.Equals(inputWords, "Yes"))
                 {
-                    if (!Int32.TryParse(this.txtWordsHowMany.Text, out maxWordValue))
+                    bool result = Int32.TryParse(this.txtWordsHowMany.Text.Trim(), out maxWordValue);
+
+                    if (!result)
                     {
                         // The text box isn't a valid number - tell the user!
                         MessageBox.Show(smsg, TitlesModel.MessageBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
