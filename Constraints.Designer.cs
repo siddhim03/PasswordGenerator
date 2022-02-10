@@ -62,6 +62,7 @@ namespace PasswordGenerator
             this.dgvQuestionsCon = new System.Windows.Forms.DataGridView();
             this.btnQandA = new System.Windows.Forms.Button();
             this.lblWord = new System.Windows.Forms.Label();
+            this.lblMaxCharLengthExplain = new System.Windows.Forms.Label();
             this.panelNumbers.SuspendLayout();
             this.panelSymbols.SuspendLayout();
             this.panelMaxChar.SuspendLayout();
@@ -405,12 +406,23 @@ namespace PasswordGenerator
             this.lblWord.TabIndex = 28;
             this.lblWord.Text = "if you answer with 0, it defaults to 2 words";
             // 
+            // lblMaxCharLengthExplain
+            // 
+            this.lblMaxCharLengthExplain.AutoSize = true;
+            this.lblMaxCharLengthExplain.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaxCharLengthExplain.Location = new System.Drawing.Point(14, 186);
+            this.lblMaxCharLengthExplain.Name = "lblMaxCharLengthExplain";
+            this.lblMaxCharLengthExplain.Size = new System.Drawing.Size(162, 13);
+            this.lblMaxCharLengthExplain.TabIndex = 29;
+            this.lblMaxCharLengthExplain.Text = "only for numbers and symbols";
+            // 
             // Constraints
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMaxCharLengthExplain);
             this.Controls.Add(this.lblWord);
             this.Controls.Add(this.btnQandA);
             this.Controls.Add(this.lblWordsEg);
@@ -482,5 +494,6 @@ namespace PasswordGenerator
         private System.Windows.Forms.DataGridView dgvQuestionsCon;
         private System.Windows.Forms.Button btnQandA;
         private System.Windows.Forms.Label lblWord;
+        private System.Windows.Forms.Label lblMaxCharLengthExplain;
     }
 }

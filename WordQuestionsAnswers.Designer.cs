@@ -31,11 +31,6 @@ namespace PasswordGenerator
         {
             this.lblWordQuestion = new System.Windows.Forms.Label();
             this.btnSubmitQA = new System.Windows.Forms.Button();
-            this.lblQuestion1 = new System.Windows.Forms.Label();
-            this.lblQuestion2 = new System.Windows.Forms.Label();
-            this.lblQuestion3 = new System.Windows.Forms.Label();
-            this.lblQuestion4 = new System.Windows.Forms.Label();
-            this.lblQuestion5 = new System.Windows.Forms.Label();
             this.txtAnswer1 = new System.Windows.Forms.TextBox();
             this.txtAnswer2 = new System.Windows.Forms.TextBox();
             this.txtAnswer3 = new System.Windows.Forms.TextBox();
@@ -43,6 +38,11 @@ namespace PasswordGenerator
             this.txtAnswer5 = new System.Windows.Forms.TextBox();
             this.btnGenerateQuestions = new System.Windows.Forms.Button();
             this.lblQandA = new System.Windows.Forms.Label();
+            this.lblQuestion1 = new System.Windows.Forms.Label();
+            this.lblQuestion2 = new System.Windows.Forms.Label();
+            this.lblQuestion3 = new System.Windows.Forms.Label();
+            this.lblQuestion4 = new System.Windows.Forms.Label();
+            this.lblQuestion5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblWordQuestion
@@ -69,64 +69,14 @@ namespace PasswordGenerator
             this.btnSubmitQA.UseVisualStyleBackColor = false;
             this.btnSubmitQA.Click += new System.EventHandler(this.btnSubmitQA_Click);
             // 
-            // lblQuestion1
-            // 
-            this.lblQuestion1.AutoSize = true;
-            this.lblQuestion1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion1.Location = new System.Drawing.Point(12, 167);
-            this.lblQuestion1.Name = "lblQuestion1";
-            this.lblQuestion1.Size = new System.Drawing.Size(102, 25);
-            this.lblQuestion1.TabIndex = 24;
-            this.lblQuestion1.Text = "Question 1";
-            // 
-            // lblQuestion2
-            // 
-            this.lblQuestion2.AutoSize = true;
-            this.lblQuestion2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion2.Location = new System.Drawing.Point(12, 210);
-            this.lblQuestion2.Name = "lblQuestion2";
-            this.lblQuestion2.Size = new System.Drawing.Size(105, 25);
-            this.lblQuestion2.TabIndex = 25;
-            this.lblQuestion2.Text = "Question 2";
-            // 
-            // lblQuestion3
-            // 
-            this.lblQuestion3.AutoSize = true;
-            this.lblQuestion3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion3.Location = new System.Drawing.Point(12, 254);
-            this.lblQuestion3.Name = "lblQuestion3";
-            this.lblQuestion3.Size = new System.Drawing.Size(105, 25);
-            this.lblQuestion3.TabIndex = 26;
-            this.lblQuestion3.Text = "Question 3";
-            // 
-            // lblQuestion4
-            // 
-            this.lblQuestion4.AutoSize = true;
-            this.lblQuestion4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion4.Location = new System.Drawing.Point(12, 299);
-            this.lblQuestion4.Name = "lblQuestion4";
-            this.lblQuestion4.Size = new System.Drawing.Size(105, 25);
-            this.lblQuestion4.TabIndex = 27;
-            this.lblQuestion4.Text = "Question 4";
-            // 
-            // lblQuestion5
-            // 
-            this.lblQuestion5.AutoSize = true;
-            this.lblQuestion5.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion5.Location = new System.Drawing.Point(12, 343);
-            this.lblQuestion5.Name = "lblQuestion5";
-            this.lblQuestion5.Size = new System.Drawing.Size(105, 25);
-            this.lblQuestion5.TabIndex = 28;
-            this.lblQuestion5.Text = "Question 5";
-            // 
             // txtAnswer1
             // 
             this.txtAnswer1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtAnswer1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnswer1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtAnswer1.Location = new System.Drawing.Point(358, 163);
+            this.txtAnswer1.Location = new System.Drawing.Point(485, 163);
             this.txtAnswer1.Name = "txtAnswer1";
-            this.txtAnswer1.Size = new System.Drawing.Size(327, 29);
+            this.txtAnswer1.Size = new System.Drawing.Size(200, 29);
             this.txtAnswer1.TabIndex = 29;
             // 
             // txtAnswer2
@@ -134,9 +84,9 @@ namespace PasswordGenerator
             this.txtAnswer2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtAnswer2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnswer2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtAnswer2.Location = new System.Drawing.Point(358, 206);
+            this.txtAnswer2.Location = new System.Drawing.Point(485, 206);
             this.txtAnswer2.Name = "txtAnswer2";
-            this.txtAnswer2.Size = new System.Drawing.Size(327, 29);
+            this.txtAnswer2.Size = new System.Drawing.Size(200, 29);
             this.txtAnswer2.TabIndex = 30;
             // 
             // txtAnswer3
@@ -144,9 +94,9 @@ namespace PasswordGenerator
             this.txtAnswer3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtAnswer3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnswer3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtAnswer3.Location = new System.Drawing.Point(358, 250);
+            this.txtAnswer3.Location = new System.Drawing.Point(485, 250);
             this.txtAnswer3.Name = "txtAnswer3";
-            this.txtAnswer3.Size = new System.Drawing.Size(327, 29);
+            this.txtAnswer3.Size = new System.Drawing.Size(200, 29);
             this.txtAnswer3.TabIndex = 31;
             // 
             // txtAnswer4
@@ -154,9 +104,9 @@ namespace PasswordGenerator
             this.txtAnswer4.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtAnswer4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnswer4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtAnswer4.Location = new System.Drawing.Point(358, 299);
+            this.txtAnswer4.Location = new System.Drawing.Point(485, 299);
             this.txtAnswer4.Name = "txtAnswer4";
-            this.txtAnswer4.Size = new System.Drawing.Size(327, 29);
+            this.txtAnswer4.Size = new System.Drawing.Size(200, 29);
             this.txtAnswer4.TabIndex = 32;
             // 
             // txtAnswer5
@@ -164,9 +114,9 @@ namespace PasswordGenerator
             this.txtAnswer5.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtAnswer5.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnswer5.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtAnswer5.Location = new System.Drawing.Point(358, 343);
+            this.txtAnswer5.Location = new System.Drawing.Point(485, 343);
             this.txtAnswer5.Name = "txtAnswer5";
-            this.txtAnswer5.Size = new System.Drawing.Size(327, 29);
+            this.txtAnswer5.Size = new System.Drawing.Size(200, 29);
             this.txtAnswer5.TabIndex = 33;
             // 
             // btnGenerateQuestions
@@ -191,6 +141,56 @@ namespace PasswordGenerator
             this.lblQandA.Size = new System.Drawing.Size(577, 21);
             this.lblQandA.TabIndex = 36;
             this.lblQandA.Text = "one word answers are preferable but no spaces if they\'re more than one word";
+            // 
+            // lblQuestion1
+            // 
+            this.lblQuestion1.AutoSize = true;
+            this.lblQuestion1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion1.Location = new System.Drawing.Point(12, 167);
+            this.lblQuestion1.Name = "lblQuestion1";
+            this.lblQuestion1.Size = new System.Drawing.Size(86, 21);
+            this.lblQuestion1.TabIndex = 24;
+            this.lblQuestion1.Text = "Question 1";
+            // 
+            // lblQuestion2
+            // 
+            this.lblQuestion2.AutoSize = true;
+            this.lblQuestion2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion2.Location = new System.Drawing.Point(12, 210);
+            this.lblQuestion2.Name = "lblQuestion2";
+            this.lblQuestion2.Size = new System.Drawing.Size(89, 21);
+            this.lblQuestion2.TabIndex = 25;
+            this.lblQuestion2.Text = "Question 2";
+            // 
+            // lblQuestion3
+            // 
+            this.lblQuestion3.AutoSize = true;
+            this.lblQuestion3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion3.Location = new System.Drawing.Point(12, 254);
+            this.lblQuestion3.Name = "lblQuestion3";
+            this.lblQuestion3.Size = new System.Drawing.Size(89, 21);
+            this.lblQuestion3.TabIndex = 26;
+            this.lblQuestion3.Text = "Question 3";
+            // 
+            // lblQuestion4
+            // 
+            this.lblQuestion4.AutoSize = true;
+            this.lblQuestion4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion4.Location = new System.Drawing.Point(12, 299);
+            this.lblQuestion4.Name = "lblQuestion4";
+            this.lblQuestion4.Size = new System.Drawing.Size(89, 21);
+            this.lblQuestion4.TabIndex = 27;
+            this.lblQuestion4.Text = "Question 4";
+            // 
+            // lblQuestion5
+            // 
+            this.lblQuestion5.AutoSize = true;
+            this.lblQuestion5.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion5.Location = new System.Drawing.Point(12, 343);
+            this.lblQuestion5.Name = "lblQuestion5";
+            this.lblQuestion5.Size = new System.Drawing.Size(89, 21);
+            this.lblQuestion5.TabIndex = 28;
+            this.lblQuestion5.Text = "Question 5";
             // 
             // WordQuestionsAnswers
             // 
@@ -224,11 +224,6 @@ namespace PasswordGenerator
 
         private System.Windows.Forms.Label lblWordQuestion;
         private System.Windows.Forms.Button btnSubmitQA;
-        private System.Windows.Forms.Label lblQuestion1;
-        private System.Windows.Forms.Label lblQuestion2;
-        private System.Windows.Forms.Label lblQuestion3;
-        private System.Windows.Forms.Label lblQuestion4;
-        private System.Windows.Forms.Label lblQuestion5;
         private System.Windows.Forms.TextBox txtAnswer1;
         private System.Windows.Forms.TextBox txtAnswer2;
         private System.Windows.Forms.TextBox txtAnswer3;
@@ -236,5 +231,10 @@ namespace PasswordGenerator
         private System.Windows.Forms.TextBox txtAnswer5;
         private System.Windows.Forms.Button btnGenerateQuestions;
         private System.Windows.Forms.Label lblQandA;
+        private System.Windows.Forms.Label lblQuestion1;
+        private System.Windows.Forms.Label lblQuestion2;
+        private System.Windows.Forms.Label lblQuestion3;
+        private System.Windows.Forms.Label lblQuestion4;
+        private System.Windows.Forms.Label lblQuestion5;
     }
 }

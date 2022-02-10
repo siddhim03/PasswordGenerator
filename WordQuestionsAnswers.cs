@@ -16,7 +16,14 @@ namespace PasswordGenerator
         //variable
         public int maxWordValue;
         Random randomize = new Random();
-        
+
+        public string answer1;
+        public string answer2;
+        public string answer3;
+        public string answer4;
+        public string answer5;
+
+
 
         public WordQuestionsAnswers()
         {
@@ -42,7 +49,7 @@ namespace PasswordGenerator
             txtAnswer5.Visible = false;
         }
 
-        public string[] lstQuestions1 = 
+        public string[] lstQuestions1 =
             {   "What did you eat today?",
                 "What's your favorite color",
                 "First animal you can think of?",
@@ -82,32 +89,32 @@ namespace PasswordGenerator
             };
 
         public string[] lstQuestions4 =
-            {   "What did you eat today?",
-                "What's your favorite color",
-                "First animal you can think of?",
-                "Favorite ice cream flavor?",
-                "What color is your hair?",
-                "Birthday month?",
-                "What's your first pet's name?",
-                "Somewhere you want to visit?",
-                "Your most used brand?",
-                "A word to describe your personality?"
+            {   "If you could be any animal what would it be?",
+                "What is your favorite summer activity?",
+                "Who is your favorite super hero?",
+                "Are you a morning or a night person?",
+                "What are you most afraid of?",
+                "What stresses you out the most?",
+                "Money or Love?",
+                "Favorite word?",
+                "One thing you are obsessed with?",
+                "Where were you born?"
             };
 
         public string[] lstQuestions5 =
-            {   "What did you eat today?",
-                "What's your favorite color",
-                "First animal you can think of?",
-                "Favorite ice cream flavor?",
-                "What color is your hair?",
-                "Birthday month?",
-                "What's your first pet's name?",
-                "Somewhere you want to visit?",
-                "Your most used brand?",
-                "A word to describe your personality?"
+            {   "What's your favorite drink?",
+                "What is your least favorite beverage?",
+                "If you could swim in any liquid what would it be?",
+                "What is your least favorite type of music?",
+                "What is your favorite genre of music?",
+                "Morning, noon, or night?",
+                "What is one item you could never live without?",
+                "Chocolate or Cheese?",
+                "Your favorite season?",
+                "Coffee or Tea?"
             };
 
-        private void btnGenerateQuestions_Click(object sender, EventArgs e)
+        public void btnGenerateQuestions_Click(object sender, EventArgs e)
         {
             if (maxWordValue == 0 || maxWordValue == 2)
             {
@@ -124,8 +131,13 @@ namespace PasswordGenerator
 
                 lblQuestion1.Text = lstQuestions1[initialValue1];
                 lblQuestion2.Text = lstQuestions2[initialValue2];
+
+                //storing answers in variables
+                answer1 = txtAnswer1.Text;
+                answer2 = txtAnswer2.Text;
+
             }
-            else if(maxWordValue == 1)
+            else if (maxWordValue == 1)
             {
                 //making questions appear
                 lblQuestion1.Visible = true;
@@ -136,6 +148,9 @@ namespace PasswordGenerator
                 int initialValue1 = randomize.Next(lstQuestions1.Length);
 
                 lblQuestion1.Text = lstQuestions1[initialValue1];
+
+                //storing answers in variables
+                answer1 = txtAnswer1.Text;
             }
             else if (maxWordValue == 3)
             {
@@ -156,6 +171,11 @@ namespace PasswordGenerator
                 lblQuestion1.Text = lstQuestions1[initialValue1];
                 lblQuestion2.Text = lstQuestions2[initialValue2];
                 lblQuestion3.Text = lstQuestions3[initialValue3];
+
+                //storing answers in variables
+                answer1 = txtAnswer1.Text;
+                answer2 = txtAnswer2.Text;
+                answer3 = txtAnswer3.Text;
             }
             else if (maxWordValue == 4)
             {
@@ -180,6 +200,12 @@ namespace PasswordGenerator
                 lblQuestion2.Text = lstQuestions2[initialValue2];
                 lblQuestion3.Text = lstQuestions3[initialValue3];
                 lblQuestion4.Text = lstQuestions4[initialValue4];
+
+                //storing answers in variables
+                answer1 = txtAnswer1.Text;
+                answer2 = txtAnswer2.Text;
+                answer3 = txtAnswer3.Text;
+                answer4 = txtAnswer4.Text;
             }
             else
             {
@@ -208,6 +234,13 @@ namespace PasswordGenerator
                 lblQuestion3.Text = lstQuestions3[initialValue3];
                 lblQuestion4.Text = lstQuestions4[initialValue4];
                 lblQuestion5.Text = lstQuestions5[initialValue5];
+
+                //storing answers in variables
+                answer1 = txtAnswer1.Text;
+                answer2 = txtAnswer2.Text;
+                answer3 = txtAnswer3.Text;
+                answer4 = txtAnswer4.Text;
+                answer5 = txtAnswer5.Text;
             }
         }
 
