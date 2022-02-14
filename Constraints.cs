@@ -44,12 +44,24 @@ namespace PasswordGenerator
         private void btnQandA_Click(object sender, EventArgs e)
         {
             WordQuestionsAnswers questionForm = new WordQuestionsAnswers();
+            
+           using (questionForm)
+            {
+                this.storeWords();
 
-            this.storeWords();
+                questionForm.maxWordValue = this.maxWordValue;
 
-            questionForm.maxWordValue = this.maxWordValue;
+                if (questionForm.ShowDialog() == DialogResult.OK)
+                {
+                    this.txtAnswer1Con.Text = questionForm.GetAnswers;
+                    this.txtAnswer2Con.Text = questionForm.answer2.Trim();
+                    this.txtAnswer3Con.Text = questionForm.answer3.Trim();
+                    this.txtAnswer4Con.Text = questionForm.answer4.Trim();
+                    this.txtAnswer5Con.Text = questionForm.answer5.Trim();
+                }
+            }
 
-            questionForm.ShowDialog();
+            //this.retrieveAnswers();
 
             btnSubmitCon.Visible = true;
         }
@@ -188,5 +200,15 @@ namespace PasswordGenerator
             return false;
         }
 
+        /*
+        public void retrieveAnswers()
+        {
+            using(WordQuestionsAnswers frm = new WordQuestionsAnswers())
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                    txtAnswer1Con.Text = frm.getAnswers();
+            }
+        }
+        */
     }
 }

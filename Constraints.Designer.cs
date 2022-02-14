@@ -29,9 +29,6 @@ namespace PasswordGenerator
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblPasswordConstraints = new System.Windows.Forms.Label();
             this.lblSymbols = new System.Windows.Forms.Label();
             this.rdoSymbolsYes = new System.Windows.Forms.RadioButton();
@@ -57,17 +54,23 @@ namespace PasswordGenerator
             this.panelWords = new System.Windows.Forms.Panel();
             this.lblMaxCharEg = new System.Windows.Forms.Label();
             this.lblWordsEg = new System.Windows.Forms.Label();
-            this.colAnswer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colQuestion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvQuestionsCon = new System.Windows.Forms.DataGridView();
             this.btnQandA = new System.Windows.Forms.Button();
             this.lblWord = new System.Windows.Forms.Label();
             this.lblMaxCharLengthExplain = new System.Windows.Forms.Label();
+            this.txtAnswer5Con = new System.Windows.Forms.TextBox();
+            this.txtAnswer4Con = new System.Windows.Forms.TextBox();
+            this.txtAnswer3Con = new System.Windows.Forms.TextBox();
+            this.txtAnswer2Con = new System.Windows.Forms.TextBox();
+            this.txtAnswer1Con = new System.Windows.Forms.TextBox();
+            this.lblQuestion5Con = new System.Windows.Forms.Label();
+            this.lblQuestion4Con = new System.Windows.Forms.Label();
+            this.lblQuestion3Con = new System.Windows.Forms.Label();
+            this.lblQuestion2Con = new System.Windows.Forms.Label();
+            this.lblQuestion1Con = new System.Windows.Forms.Label();
             this.panelNumbers.SuspendLayout();
             this.panelSymbols.SuspendLayout();
             this.panelMaxChar.SuspendLayout();
             this.panelWords.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQuestionsCon)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPasswordConstraints
@@ -272,7 +275,7 @@ namespace PasswordGenerator
             this.btnSubmitCon.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnSubmitCon.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitCon.ForeColor = System.Drawing.Color.White;
-            this.btnSubmitCon.Location = new System.Drawing.Point(340, 393);
+            this.btnSubmitCon.Location = new System.Drawing.Point(341, 473);
             this.btnSubmitCon.Name = "btnSubmitCon";
             this.btnSubmitCon.Size = new System.Drawing.Size(112, 45);
             this.btnSubmitCon.TabIndex = 18;
@@ -336,53 +339,6 @@ namespace PasswordGenerator
             this.lblWordsEg.TabIndex = 26;
             this.lblWordsEg.Text = "Enter amount here (max is 5)";
             // 
-            // colAnswer
-            // 
-            this.colAnswer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colAnswer.HeaderText = "Answer";
-            this.colAnswer.Name = "colAnswer";
-            // 
-            // colQuestion
-            // 
-            this.colQuestion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colQuestion.HeaderText = "Question";
-            this.colQuestion.Name = "colQuestion";
-            // 
-            // dgvQuestionsCon
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQuestionsCon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvQuestionsCon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuestionsCon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colQuestion,
-            this.colAnswer});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQuestionsCon.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvQuestionsCon.Location = new System.Drawing.Point(17, 312);
-            this.dgvQuestionsCon.Name = "dgvQuestionsCon";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQuestionsCon.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvQuestionsCon.Size = new System.Drawing.Size(760, 75);
-            this.dgvQuestionsCon.TabIndex = 19;
-            // 
             // btnQandA
             // 
             this.btnQandA.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -416,12 +372,122 @@ namespace PasswordGenerator
             this.lblMaxCharLengthExplain.TabIndex = 29;
             this.lblMaxCharLengthExplain.Text = "only for numbers and symbols";
             // 
+            // txtAnswer5Con
+            // 
+            this.txtAnswer5Con.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAnswer5Con.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswer5Con.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtAnswer5Con.Location = new System.Drawing.Point(517, 424);
+            this.txtAnswer5Con.Name = "txtAnswer5Con";
+            this.txtAnswer5Con.Size = new System.Drawing.Size(200, 25);
+            this.txtAnswer5Con.TabIndex = 38;
+            // 
+            // txtAnswer4Con
+            // 
+            this.txtAnswer4Con.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAnswer4Con.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswer4Con.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtAnswer4Con.Location = new System.Drawing.Point(517, 395);
+            this.txtAnswer4Con.Name = "txtAnswer4Con";
+            this.txtAnswer4Con.Size = new System.Drawing.Size(200, 25);
+            this.txtAnswer4Con.TabIndex = 37;
+            // 
+            // txtAnswer3Con
+            // 
+            this.txtAnswer3Con.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAnswer3Con.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswer3Con.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtAnswer3Con.Location = new System.Drawing.Point(517, 367);
+            this.txtAnswer3Con.Name = "txtAnswer3Con";
+            this.txtAnswer3Con.Size = new System.Drawing.Size(200, 25);
+            this.txtAnswer3Con.TabIndex = 36;
+            // 
+            // txtAnswer2Con
+            // 
+            this.txtAnswer2Con.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAnswer2Con.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswer2Con.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtAnswer2Con.Location = new System.Drawing.Point(517, 340);
+            this.txtAnswer2Con.Name = "txtAnswer2Con";
+            this.txtAnswer2Con.Size = new System.Drawing.Size(200, 25);
+            this.txtAnswer2Con.TabIndex = 35;
+            // 
+            // txtAnswer1Con
+            // 
+            this.txtAnswer1Con.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAnswer1Con.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswer1Con.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtAnswer1Con.Location = new System.Drawing.Point(517, 312);
+            this.txtAnswer1Con.Name = "txtAnswer1Con";
+            this.txtAnswer1Con.Size = new System.Drawing.Size(200, 25);
+            this.txtAnswer1Con.TabIndex = 34;
+            // 
+            // lblQuestion5Con
+            // 
+            this.lblQuestion5Con.AutoSize = true;
+            this.lblQuestion5Con.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion5Con.Location = new System.Drawing.Point(100, 421);
+            this.lblQuestion5Con.Name = "lblQuestion5Con";
+            this.lblQuestion5Con.Size = new System.Drawing.Size(78, 19);
+            this.lblQuestion5Con.TabIndex = 43;
+            this.lblQuestion5Con.Text = "Question 5";
+            // 
+            // lblQuestion4Con
+            // 
+            this.lblQuestion4Con.AutoSize = true;
+            this.lblQuestion4Con.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion4Con.Location = new System.Drawing.Point(100, 392);
+            this.lblQuestion4Con.Name = "lblQuestion4Con";
+            this.lblQuestion4Con.Size = new System.Drawing.Size(78, 19);
+            this.lblQuestion4Con.TabIndex = 42;
+            this.lblQuestion4Con.Text = "Question 4";
+            // 
+            // lblQuestion3Con
+            // 
+            this.lblQuestion3Con.AutoSize = true;
+            this.lblQuestion3Con.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion3Con.Location = new System.Drawing.Point(100, 364);
+            this.lblQuestion3Con.Name = "lblQuestion3Con";
+            this.lblQuestion3Con.Size = new System.Drawing.Size(78, 19);
+            this.lblQuestion3Con.TabIndex = 41;
+            this.lblQuestion3Con.Text = "Question 3";
+            // 
+            // lblQuestion2Con
+            // 
+            this.lblQuestion2Con.AutoSize = true;
+            this.lblQuestion2Con.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion2Con.Location = new System.Drawing.Point(98, 337);
+            this.lblQuestion2Con.Name = "lblQuestion2Con";
+            this.lblQuestion2Con.Size = new System.Drawing.Size(78, 19);
+            this.lblQuestion2Con.TabIndex = 40;
+            this.lblQuestion2Con.Text = "Question 2";
+            // 
+            // lblQuestion1Con
+            // 
+            this.lblQuestion1Con.AutoSize = true;
+            this.lblQuestion1Con.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion1Con.Location = new System.Drawing.Point(100, 309);
+            this.lblQuestion1Con.Name = "lblQuestion1Con";
+            this.lblQuestion1Con.Size = new System.Drawing.Size(76, 19);
+            this.lblQuestion1Con.TabIndex = 39;
+            this.lblQuestion1Con.Text = "Question 1";
+            // 
             // Constraints
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 530);
+            this.Controls.Add(this.lblQuestion5Con);
+            this.Controls.Add(this.lblQuestion4Con);
+            this.Controls.Add(this.lblQuestion3Con);
+            this.Controls.Add(this.lblQuestion2Con);
+            this.Controls.Add(this.lblQuestion1Con);
+            this.Controls.Add(this.txtAnswer5Con);
+            this.Controls.Add(this.txtAnswer4Con);
+            this.Controls.Add(this.txtAnswer3Con);
+            this.Controls.Add(this.txtAnswer2Con);
+            this.Controls.Add(this.txtAnswer1Con);
             this.Controls.Add(this.lblMaxCharLengthExplain);
             this.Controls.Add(this.lblWord);
             this.Controls.Add(this.btnQandA);
@@ -431,7 +497,6 @@ namespace PasswordGenerator
             this.Controls.Add(this.panelMaxChar);
             this.Controls.Add(this.panelSymbols);
             this.Controls.Add(this.panelNumbers);
-            this.Controls.Add(this.dgvQuestionsCon);
             this.Controls.Add(this.btnSubmitCon);
             this.Controls.Add(this.txtWordsHowMany);
             this.Controls.Add(this.lblWordsHowMany);
@@ -456,7 +521,6 @@ namespace PasswordGenerator
             this.panelMaxChar.PerformLayout();
             this.panelWords.ResumeLayout(false);
             this.panelWords.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQuestionsCon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,11 +553,18 @@ namespace PasswordGenerator
         private System.Windows.Forms.Panel panelWords;
         private System.Windows.Forms.Label lblMaxCharEg;
         private System.Windows.Forms.Label lblWordsEg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAnswer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colQuestion;
-        private System.Windows.Forms.DataGridView dgvQuestionsCon;
         private System.Windows.Forms.Button btnQandA;
         private System.Windows.Forms.Label lblWord;
         private System.Windows.Forms.Label lblMaxCharLengthExplain;
+        private System.Windows.Forms.TextBox txtAnswer5Con;
+        private System.Windows.Forms.TextBox txtAnswer4Con;
+        private System.Windows.Forms.TextBox txtAnswer3Con;
+        private System.Windows.Forms.TextBox txtAnswer2Con;
+        private System.Windows.Forms.TextBox txtAnswer1Con;
+        private System.Windows.Forms.Label lblQuestion5Con;
+        private System.Windows.Forms.Label lblQuestion4Con;
+        private System.Windows.Forms.Label lblQuestion3Con;
+        private System.Windows.Forms.Label lblQuestion2Con;
+        private System.Windows.Forms.Label lblQuestion1Con;
     }
 }

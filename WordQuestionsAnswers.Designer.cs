@@ -59,6 +59,7 @@ namespace PasswordGenerator
             // btnSubmitQA
             // 
             this.btnSubmitQA.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSubmitQA.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSubmitQA.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitQA.ForeColor = System.Drawing.Color.White;
             this.btnSubmitQA.Location = new System.Drawing.Point(287, 393);
@@ -194,6 +195,7 @@ namespace PasswordGenerator
             // 
             // WordQuestionsAnswers
             // 
+            this.AcceptButton = this.btnSubmitQA;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;

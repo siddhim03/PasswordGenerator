@@ -47,6 +47,8 @@ namespace PasswordGenerator
             txtAnswer3.Visible = false;
             txtAnswer4.Visible = false;
             txtAnswer5.Visible = false;
+
+            this.DisplayQuestions();
         }
 
         public string[] lstQuestions1 =
@@ -115,6 +117,11 @@ namespace PasswordGenerator
             };
 
         public void btnGenerateQuestions_Click(object sender, EventArgs e)
+        {
+            this.DisplayQuestions();
+        }
+
+        private void DisplayQuestions()
         {
             if (maxWordValue == 0 || maxWordValue == 2)
             {
@@ -244,9 +251,52 @@ namespace PasswordGenerator
             }
         }
 
+        public string GetAnswer1 
+        { 
+            get
+            {
+                return txtAnswer1.Text;
+            }
+        }
+
+        public string GetAnswer2
+        {
+            get{ 
+                return txtAnswer2.Text; 
+            }
+        }
+
+        public string GetAnswer3
+        {
+            get
+            {
+                return txtAnswer3.Text;
+            }
+        }
+
+        public string GetAnswer4
+        {
+            get
+            {
+                return txtAnswer4.Text;
+            }
+        }
+
+        public string GetAnswer5
+        {
+            get
+            {
+                return txtAnswer5.Text;
+            }
+        }
         private void btnSubmitQA_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            string a = this.GetAnswer1;
+            string b = this.GetAnswer2;
+            string c = this.GetAnswer3;
+            string d = this.GetAnswer4;
+            string e = this.GetAnswer5;
+            this.Close();
         }
     }
 }
