@@ -20,6 +20,10 @@ namespace PasswordGenerator
         public string answer4;
         public string answer5;
 
+
+        Random rnd = new Random();
+        int nums = rnd.Next(0, 101);
+
         //methods
         public Constraints()
         {
@@ -31,6 +35,9 @@ namespace PasswordGenerator
             this.CenterToScreen();
             this.setControls();
             btnSubmitCon.Visible = false;
+            btnQandA.Enabled = false;
+            txtWordsHowMany.Enabled = false;
+            txtMaxCharLength.Enabled = false;
         }
 
         private void setControls()
@@ -45,7 +52,7 @@ namespace PasswordGenerator
         {
             WordQuestionsAnswers questionForm = new WordQuestionsAnswers();
             
-           using (questionForm)
+            using (questionForm)
             {
                 this.storeWords();
 
@@ -53,15 +60,19 @@ namespace PasswordGenerator
 
                 if (questionForm.ShowDialog() == DialogResult.OK)
                 {
-                    this.txtAnswer1Con.Text = questionForm.GetAnswers;
-                    this.txtAnswer2Con.Text = questionForm.answer2.Trim();
-                    this.txtAnswer3Con.Text = questionForm.answer3.Trim();
-                    this.txtAnswer4Con.Text = questionForm.answer4.Trim();
-                    this.txtAnswer5Con.Text = questionForm.answer5.Trim();
+                    this.txtAnswer1Con.Text = questionForm.GetAnswer1.Trim();
+                    this.txtAnswer2Con.Text = questionForm.GetAnswer2.Trim();
+                    this.txtAnswer3Con.Text = questionForm.GetAnswer3.Trim();
+                    this.txtAnswer4Con.Text = questionForm.GetAnswer4.Trim();
+                    this.txtAnswer5Con.Text = questionForm.GetAnswer5.Trim();
+
+                    this.lblQuestion1Con.Text = questionForm.GetQuestion1.Trim();
+                    this.lblQuestion2Con.Text = questionForm.GetQuestion2.Trim();
+                    this.lblQuestion3Con.Text = questionForm.GetQuestion3.Trim();
+                    this.lblQuestion4Con.Text = questionForm.GetQuestion4.Trim();
+                    this.lblQuestion5Con.Text = questionForm.GetQuestion5.Trim();
                 }
             }
-
-            //this.retrieveAnswers();
 
             btnSubmitCon.Visible = true;
         }
@@ -76,7 +87,9 @@ namespace PasswordGenerator
 
             if (!this.checkInformation())
                 return;
-            
+
+            this.makePassword();
+
             this.Dispose();
 
         }
@@ -104,9 +117,6 @@ namespace PasswordGenerator
             if (!this.storeMaxChar())
                 return false;
 
-            if (!this.storeWords())
-                return false;
-
             return true;
         }
 
@@ -121,6 +131,11 @@ namespace PasswordGenerator
             {
                 inputNumbers = rdoNumbersYes.Text;
             }
+        }
+
+        private void rdoMaxCharLengthYes_CheckedChanged(object sender, EventArgs e)
+        {
+            txtMaxCharLength.Enabled = true;
         }
 
         private bool storeMaxChar()
@@ -153,6 +168,11 @@ namespace PasswordGenerator
             return true;
         }
 
+        private void rdoWordsYes_CheckedChanged(object sender, EventArgs e)
+        {
+            txtWordsHowMany.Enabled = true;
+        }
+
         public bool storeWords()
         {
             if (rdoWordsYes.Checked == true)
@@ -160,7 +180,8 @@ namespace PasswordGenerator
                 inputWords = rdoWordsYes.Text;
                 string smsg = "Please enter a number value for amount of words!";
 
-                if (String.Equals(inputWords, " "))
+                
+                if (String.Equals(inputWords, ""))
                 {
                     // The text box isn't a valid number - tell the user!
                     MessageBox.Show(smsg, TitlesModel.MessageBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -185,6 +206,18 @@ namespace PasswordGenerator
             return true;
         }
 
+        private void txtWordsHowMany_TextChanged(object sender, EventArgs e)
+        {
+            if (!storeWords())
+            {
+                btnQandA.Enabled = false;
+            }
+            else
+            {
+                btnQandA.Enabled = true;
+            }
+        }
+
         private bool checkInformation()
         {
             DialogResult dialogResult = MessageBox.Show("Is all the information correct?", "Password Generator", MessageBoxButtons.YesNo);
@@ -200,15 +233,17 @@ namespace PasswordGenerator
             return false;
         }
 
-        /*
-        public void retrieveAnswers()
+        public string[] symbolsList = { "!", "@", "#", "$", "%", "^", "&", "*", "=", "-", "_", "/",
+            "+", ":", ";", "(", ")", "{", "}", "[", "]", "|", "~" , "."};
+
+        private void makePassword()
         {
-            using(WordQuestionsAnswers frm = new WordQuestionsAnswers())
+            if(rdoNumbersYes.Checked == true && rdoNumbersYes.Checked == true
+                && this.storeMaxChar() && this.storeWords())
             {
-                if (frm.ShowDialog() == DialogResult.OK)
-                    txtAnswer1Con.Text = frm.getAnswers();
+
             }
         }
-        */
+
     }
 }

@@ -67,6 +67,7 @@ namespace PasswordGenerator
             this.lblQuestion3Con = new System.Windows.Forms.Label();
             this.lblQuestion2Con = new System.Windows.Forms.Label();
             this.lblQuestion1Con = new System.Windows.Forms.Label();
+            this.lblNumbersExplain = new System.Windows.Forms.Label();
             this.panelNumbers.SuspendLayout();
             this.panelSymbols.SuspendLayout();
             this.panelMaxChar.SuspendLayout();
@@ -195,6 +196,7 @@ namespace PasswordGenerator
             this.rdoMaxCharLengthYes.TabStop = true;
             this.rdoMaxCharLengthYes.Text = "Yes";
             this.rdoMaxCharLengthYes.UseVisualStyleBackColor = true;
+            this.rdoMaxCharLengthYes.CheckedChanged += new System.EventHandler(this.rdoMaxCharLengthYes_CheckedChanged);
             // 
             // lblMaxCharLength
             // 
@@ -239,6 +241,7 @@ namespace PasswordGenerator
             this.rdoWordsYes.TabStop = true;
             this.rdoWordsYes.Text = "Yes";
             this.rdoWordsYes.UseVisualStyleBackColor = true;
+            this.rdoWordsYes.CheckedChanged += new System.EventHandler(this.rdoWordsYes_CheckedChanged);
             // 
             // lblWords
             // 
@@ -269,6 +272,7 @@ namespace PasswordGenerator
             this.txtWordsHowMany.Name = "txtWordsHowMany";
             this.txtWordsHowMany.Size = new System.Drawing.Size(166, 29);
             this.txtWordsHowMany.TabIndex = 17;
+            this.txtWordsHowMany.TextChanged += new System.EventHandler(this.txtWordsHowMany_TextChanged);
             // 
             // btnSubmitCon
             // 
@@ -358,9 +362,9 @@ namespace PasswordGenerator
             this.lblWord.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWord.Location = new System.Drawing.Point(564, 221);
             this.lblWord.Name = "lblWord";
-            this.lblWord.Size = new System.Drawing.Size(221, 13);
+            this.lblWord.Size = new System.Drawing.Size(96, 13);
             this.lblWord.TabIndex = 28;
-            this.lblWord.Text = "if you answer with 0, it defaults to 2 words";
+            this.lblWord.Text = "CANNOT ENTER 0";
             // 
             // lblMaxCharLengthExplain
             // 
@@ -472,12 +476,23 @@ namespace PasswordGenerator
             this.lblQuestion1Con.TabIndex = 39;
             this.lblQuestion1Con.Text = "Question 1";
             // 
+            // lblNumbersExplain
+            // 
+            this.lblNumbersExplain.AutoSize = true;
+            this.lblNumbersExplain.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumbersExplain.Location = new System.Drawing.Point(16, 141);
+            this.lblNumbersExplain.Name = "lblNumbersExplain";
+            this.lblNumbersExplain.Size = new System.Drawing.Size(137, 13);
+            this.lblNumbersExplain.TabIndex = 44;
+            this.lblNumbersExplain.Text = "will be no bigger than 100";
+            // 
             // Constraints
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 530);
+            this.Controls.Add(this.lblNumbersExplain);
             this.Controls.Add(this.lblQuestion5Con);
             this.Controls.Add(this.lblQuestion4Con);
             this.Controls.Add(this.lblQuestion3Con);
@@ -566,5 +581,6 @@ namespace PasswordGenerator
         private System.Windows.Forms.Label lblQuestion3Con;
         private System.Windows.Forms.Label lblQuestion2Con;
         private System.Windows.Forms.Label lblQuestion1Con;
+        private System.Windows.Forms.Label lblNumbersExplain;
     }
 }

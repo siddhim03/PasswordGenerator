@@ -116,14 +116,25 @@ namespace PasswordGenerator
                 "Coffee or Tea?"
             };
 
-        public void btnGenerateQuestions_Click(object sender, EventArgs e)
-        {
-            this.DisplayQuestions();
-        }
-
         private void DisplayQuestions()
         {
-            if (maxWordValue == 0 || maxWordValue == 2)
+            if (maxWordValue == 1)
+            {
+                //making questions appear
+                lblQuestion1.Visible = true;
+
+                //making answer textboxes appear
+                txtAnswer1.Visible = true;
+
+                int initialValue1 = randomize.Next(lstQuestions1.Length);
+
+                lblQuestion1.Text = lstQuestions1[initialValue1];
+
+                //storing answers in variables
+                answer1 = txtAnswer1.Text;
+            }
+
+            else if (maxWordValue == 2)
             {
                 //making questions appear
                 lblQuestion1.Visible = true;
@@ -144,21 +155,7 @@ namespace PasswordGenerator
                 answer2 = txtAnswer2.Text;
 
             }
-            else if (maxWordValue == 1)
-            {
-                //making questions appear
-                lblQuestion1.Visible = true;
-
-                //making answer textboxes appear
-                txtAnswer1.Visible = true;
-
-                int initialValue1 = randomize.Next(lstQuestions1.Length);
-
-                lblQuestion1.Text = lstQuestions1[initialValue1];
-
-                //storing answers in variables
-                answer1 = txtAnswer1.Text;
-            }
+            
             else if (maxWordValue == 3)
             {
                 //making questions appear
@@ -258,14 +255,12 @@ namespace PasswordGenerator
                 return txtAnswer1.Text;
             }
         }
-
         public string GetAnswer2
         {
             get{ 
                 return txtAnswer2.Text; 
             }
         }
-
         public string GetAnswer3
         {
             get
@@ -273,7 +268,6 @@ namespace PasswordGenerator
                 return txtAnswer3.Text;
             }
         }
-
         public string GetAnswer4
         {
             get
@@ -281,7 +275,6 @@ namespace PasswordGenerator
                 return txtAnswer4.Text;
             }
         }
-
         public string GetAnswer5
         {
             get
@@ -289,13 +282,45 @@ namespace PasswordGenerator
                 return txtAnswer5.Text;
             }
         }
+
+        public string GetQuestion1
+        {
+            get
+            {
+                return lblQuestion1.Text;
+            }
+        }
+        public string GetQuestion2
+        {
+            get
+            {
+                return lblQuestion2.Text;
+            }
+        }
+        public string GetQuestion3
+        {
+            get
+            {
+                return lblQuestion3.Text;
+            }
+        }
+        public string GetQuestion4
+        {
+            get
+            {
+                return lblQuestion4.Text;
+            }
+        }
+        public string GetQuestion5
+        {
+            get
+            {
+                return lblQuestion5.Text;
+            }
+        }
+
         private void btnSubmitQA_Click(object sender, EventArgs e)
         {
-            string a = this.GetAnswer1;
-            string b = this.GetAnswer2;
-            string c = this.GetAnswer3;
-            string d = this.GetAnswer4;
-            string e = this.GetAnswer5;
             this.Close();
         }
     }
