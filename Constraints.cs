@@ -11,7 +11,6 @@ namespace PasswordGenerator
         private string inputNumbers;
         private string inputMaxChar;
         private string inputWords;
-        //private int maxCharValue;
         public int maxWordValue = 0;
 
         public string answer1;
@@ -19,6 +18,20 @@ namespace PasswordGenerator
         public string answer3;
         public string answer4;
         public string answer5;
+
+        public static string word1;
+        public static string word2;
+        public static string word3;
+        public static string word4;
+        public static string word5;
+
+        public string password1;
+        public string password2;
+        public string password3;
+
+        public int password1Num;
+        public int password2Num;
+        public int password3Num;
 
 
         //methods
@@ -134,10 +147,19 @@ namespace PasswordGenerator
                     }
 
                     this.txtAnswer1Con.Text = questionForm.GetAnswer1.Trim();
+                    word1 = questionForm.GetAnswer1.Trim();
+
                     this.txtAnswer2Con.Text = questionForm.GetAnswer2.Trim();
+                    word2 = questionForm.GetAnswer2.Trim();
+
                     this.txtAnswer3Con.Text = questionForm.GetAnswer3.Trim();
+                    word3 = questionForm.GetAnswer3.Trim();
+
                     this.txtAnswer4Con.Text = questionForm.GetAnswer4.Trim();
+                    word4 = questionForm.GetAnswer4.Trim();
+
                     this.txtAnswer5Con.Text = questionForm.GetAnswer5.Trim();
+                    word5 = questionForm.GetAnswer5.Trim();
 
                     this.lblQuestion1Con.Text = questionForm.GetQuestion1.Trim();
                     this.lblQuestion2Con.Text = questionForm.GetQuestion2.Trim();
@@ -202,6 +224,14 @@ namespace PasswordGenerator
 
         private void storeMaxChar()
         {
+            if (rdoSymbolsNo.Checked == true || rdoNumbersNo.Checked == true)
+            {
+                rdoHowLong3.Enabled = false;
+                rdoHowLong5.Enabled = false;
+                rdoHowLong7.Enabled = false;
+                rdoHowLong9.Enabled = false;
+            }
+
             if (rdoSymbolsYes.Checked == true || rdoNumbersYes.Checked == true)
             {
                 rdoHowLong3.Enabled = true;
@@ -226,7 +256,7 @@ namespace PasswordGenerator
                     inputMaxChar = rdoHowLong9.Text;
                 }
             }
-            
+
         }
         private void SymbolsCheckedYes(object sender, EventArgs e)
         {
@@ -300,7 +330,7 @@ namespace PasswordGenerator
 
         private void rdoWordsNo_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdoSymbolsNo.Checked == true && rdoNumbersYes.Checked == true) 
+            if (rdoSymbolsYes.Checked == true && rdoNumbersYes.Checked == true)
             {
                 btnSubmitCon.Visible = true;
             }
@@ -337,21 +367,81 @@ namespace PasswordGenerator
         public string[] symbolsList = { "!", "@", "#", "$", "%", "^", "&", "*", "=", "-", "_", "/",
             "+", ":", ";", "(", ")", "{", "}", "[", "]", "|", "~" , "."};
 
+        public string[] wordList = { word1, word2, word3, word4, word5 };
+
         private void makePassword()
         {
             Random rnd = new Random();
+
+            //numbers
             int nums1 = rnd.Next(0, 10);
             int nums2 = rnd.Next(0, 10);
             int nums3 = rnd.Next(0, 10);
             int nums4 = rnd.Next(0, 10);
             int nums5 = rnd.Next(0, 10);
 
+            //symbols
+            int initialValue1 = rnd.Next(symbolsList.Length);
+            int initialValue2 = rnd.Next(symbolsList.Length);
+            int initialValue3 = rnd.Next(symbolsList.Length);
+            int initialValue4 = rnd.Next(symbolsList.Length);
 
-            //if (rdoNumbersYes.Checked == true && rdoNumbersYes.Checked == true
-                //&& this.storeMaxChar() && this.storeWords())
+            string symbol1 = symbolsList[initialValue1];
+            string symbol2 = symbolsList[initialValue2];
+            string symbol3 = symbolsList[initialValue3];
+            string symbol4 = symbolsList[initialValue4];
+
+            if(rdoWordsNo.Checked == true)
             {
+                if(inputMaxChar.Equals("3"))
+                {
+                    if(rdoSymbolsYes.Checked == true && rdoNumbersYes.Checked == true)
+                    {
+                        password1 = nums1 + nums2 + symbol1;
+                        password2 = symbol1 + nums1 + nums2;
+                        password3 = nums1 + symbol1 + nums2;
+                    }
 
+                    if (rdoSymbolsYes.Checked == true && rdoNumbersNo.Checked == true)
+                    {
+                        password1 = symbol1 + symbol2 + symbol3;
+                        password2 = symbol2 + symbol3 + symbol1;
+                        password3 = symbol3 + symbol1 + symbol2;
+                    }
+
+                    if (rdoSymbolsNo.Checked == true && rdoNumbersYes.Checked == true)
+                    {
+                        password1Num = nums1 + nums2 + nums3;
+                        password2Num = nums2 + nums3 + nums1;
+                        password3Num = nums3 + nums1 + nums2;
+                    }
+                }
+
+                if (inputMaxChar.Equals("5"))
+                {
+                    if (rdoSymbolsYes.Checked == true && rdoNumbersYes.Checked == true)
+                    {
+                        password1 = nums1 + nums2 + nums3 + symbol1 + symbol2;
+                        password2 = symbol1 + symbol2 + nums1 + nums2 + nums3;
+                        password3 = symbol1 + nums1 + nums2 + nums3 + symbol2;
+                    }
+
+                    if (rdoSymbolsYes.Checked == true && rdoNumbersNo.Checked == true)
+                    {
+                        password1 = symbol1 + symbol2 + symbol3 + symbol4;
+                        password2 = symbol2 + symbol3 + symbol1;
+                        password3 = symbol3 + symbol1 + symbol2;
+                    }
+
+                    if (rdoSymbolsNo.Checked == true && rdoNumbersYes.Checked == true)
+                    {
+                        password1Num = nums1 + nums2 + nums3;
+                        password2Num = nums2 + nums3 + nums1;
+                        password3Num = nums3 + nums1 + nums2;
+                    }
+                }
             }
+            
         }
 
     }

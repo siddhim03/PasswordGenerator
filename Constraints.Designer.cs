@@ -62,12 +62,12 @@ namespace PasswordGenerator
             this.lblQuestion2Con = new System.Windows.Forms.Label();
             this.lblQuestion1Con = new System.Windows.Forms.Label();
             this.panelMaxChar = new System.Windows.Forms.Panel();
-            this.rdoHowLong9 = new System.Windows.Forms.RadioButton();
             this.rdoHowLong7 = new System.Windows.Forms.RadioButton();
             this.rdoHowLong3 = new System.Windows.Forms.RadioButton();
             this.rdoHowLong5 = new System.Windows.Forms.RadioButton();
             this.lblMaxCharLength = new System.Windows.Forms.Label();
             this.lblMaxCharLengthExplain = new System.Windows.Forms.Label();
+            this.rdoHowLong9 = new System.Windows.Forms.RadioButton();
             this.panelNumbers.SuspendLayout();
             this.panelSymbols.SuspendLayout();
             this.panelWords.SuspendLayout();
@@ -428,18 +428,6 @@ namespace PasswordGenerator
             this.panelMaxChar.Size = new System.Drawing.Size(292, 39);
             this.panelMaxChar.TabIndex = 23;
             // 
-            // rdoHowLong9
-            // 
-            this.rdoHowLong9.AutoSize = true;
-            this.rdoHowLong9.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoHowLong9.Location = new System.Drawing.Point(240, 4);
-            this.rdoHowLong9.Name = "rdoHowLong9";
-            this.rdoHowLong9.Size = new System.Drawing.Size(41, 29);
-            this.rdoHowLong9.TabIndex = 13;
-            this.rdoHowLong9.TabStop = true;
-            this.rdoHowLong9.Text = "9";
-            this.rdoHowLong9.UseVisualStyleBackColor = true;
-            // 
             // rdoHowLong7
             // 
             this.rdoHowLong7.AutoSize = true;
@@ -495,6 +483,18 @@ namespace PasswordGenerator
             this.lblMaxCharLengthExplain.Size = new System.Drawing.Size(162, 13);
             this.lblMaxCharLengthExplain.TabIndex = 29;
             this.lblMaxCharLengthExplain.Text = "only for numbers and symbols";
+            // 
+            // rdoHowLong9
+            // 
+            this.rdoHowLong9.AutoSize = true;
+            this.rdoHowLong9.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoHowLong9.Location = new System.Drawing.Point(240, 4);
+            this.rdoHowLong9.Name = "rdoHowLong9";
+            this.rdoHowLong9.Size = new System.Drawing.Size(41, 29);
+            this.rdoHowLong9.TabIndex = 13;
+            this.rdoHowLong9.TabStop = true;
+            this.rdoHowLong9.Text = "9";
+            this.rdoHowLong9.UseVisualStyleBackColor = true;
             // 
             // Constraints
             // 
@@ -586,8 +586,8 @@ namespace PasswordGenerator
         private System.Windows.Forms.RadioButton rdoHowLong5;
         private System.Windows.Forms.Label lblMaxCharLength;
         private System.Windows.Forms.Label lblMaxCharLengthExplain;
-        private System.Windows.Forms.RadioButton rdoHowLong9;
         private System.Windows.Forms.RadioButton rdoHowLong7;
         private System.Windows.Forms.RadioButton rdoSymbolsYes;
+        private System.Windows.Forms.RadioButton rdoHowLong9;
     }
 }
