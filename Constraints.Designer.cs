@@ -38,8 +38,6 @@ namespace PasswordGenerator
             this.lblNumbers = new System.Windows.Forms.Label();
             this.lblSymbolsEg = new System.Windows.Forms.Label();
             this.lblNumbersEg = new System.Windows.Forms.Label();
-            this.rdoWordsNo = new System.Windows.Forms.RadioButton();
-            this.rdoWordsYes = new System.Windows.Forms.RadioButton();
             this.lblWords = new System.Windows.Forms.Label();
             this.lblWordsHowMany = new System.Windows.Forms.Label();
             this.txtWordsHowMany = new System.Windows.Forms.TextBox();
@@ -61,17 +59,21 @@ namespace PasswordGenerator
             this.lblQuestion3Con = new System.Windows.Forms.Label();
             this.lblQuestion2Con = new System.Windows.Forms.Label();
             this.lblQuestion1Con = new System.Windows.Forms.Label();
-            this.panelMaxChar = new System.Windows.Forms.Panel();
-            this.rdoHowLong7 = new System.Windows.Forms.RadioButton();
-            this.rdoHowLong3 = new System.Windows.Forms.RadioButton();
-            this.rdoHowLong5 = new System.Windows.Forms.RadioButton();
-            this.lblMaxCharLength = new System.Windows.Forms.Label();
-            this.lblMaxCharLengthExplain = new System.Windows.Forms.Label();
-            this.rdoHowLong9 = new System.Windows.Forms.RadioButton();
+            this.panelNumbersRdo = new System.Windows.Forms.Panel();
+            this.rdoNumber3 = new System.Windows.Forms.RadioButton();
+            this.rdoNumber5 = new System.Windows.Forms.RadioButton();
+            this.panelSymbolsRdo = new System.Windows.Forms.Panel();
+            this.rdoSymbol3 = new System.Windows.Forms.RadioButton();
+            this.rdoSymbol5 = new System.Windows.Forms.RadioButton();
+            this.lblSymbolsHowMany = new System.Windows.Forms.Label();
+            this.lblNumbersHowMany = new System.Windows.Forms.Label();
+            this.rdoWordsYes = new System.Windows.Forms.RadioButton();
+            this.rdoWordsNo = new System.Windows.Forms.RadioButton();
             this.panelNumbers.SuspendLayout();
             this.panelSymbols.SuspendLayout();
             this.panelWords.SuspendLayout();
-            this.panelMaxChar.SuspendLayout();
+            this.panelNumbersRdo.SuspendLayout();
+            this.panelSymbolsRdo.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblPasswordConstraints
@@ -149,7 +151,7 @@ namespace PasswordGenerator
             // 
             this.lblNumbers.AutoSize = true;
             this.lblNumbers.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumbers.Location = new System.Drawing.Point(12, 116);
+            this.lblNumbers.Location = new System.Drawing.Point(12, 139);
             this.lblNumbers.Name = "lblNumbers";
             this.lblNumbers.Size = new System.Drawing.Size(99, 25);
             this.lblNumbers.TabIndex = 4;
@@ -159,7 +161,7 @@ namespace PasswordGenerator
             // 
             this.lblSymbolsEg.AutoSize = true;
             this.lblSymbolsEg.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSymbolsEg.Location = new System.Drawing.Point(455, 68);
+            this.lblSymbolsEg.Location = new System.Drawing.Point(363, 72);
             this.lblSymbolsEg.Name = "lblSymbolsEg";
             this.lblSymbolsEg.Size = new System.Drawing.Size(131, 21);
             this.lblSymbolsEg.TabIndex = 7;
@@ -169,37 +171,11 @@ namespace PasswordGenerator
             // 
             this.lblNumbersEg.AutoSize = true;
             this.lblNumbersEg.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumbersEg.Location = new System.Drawing.Point(455, 117);
+            this.lblNumbersEg.Location = new System.Drawing.Point(363, 144);
             this.lblNumbersEg.Name = "lblNumbersEg";
             this.lblNumbersEg.Size = new System.Drawing.Size(126, 21);
             this.lblNumbersEg.TabIndex = 8;
             this.lblNumbersEg.Text = "(Eg: 1, 10, 9, 2, 5)";
-            // 
-            // rdoWordsNo
-            // 
-            this.rdoWordsNo.AutoSize = true;
-            this.rdoWordsNo.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoWordsNo.Location = new System.Drawing.Point(98, 5);
-            this.rdoWordsNo.Name = "rdoWordsNo";
-            this.rdoWordsNo.Size = new System.Drawing.Size(56, 29);
-            this.rdoWordsNo.TabIndex = 15;
-            this.rdoWordsNo.TabStop = true;
-            this.rdoWordsNo.Text = "No";
-            this.rdoWordsNo.UseVisualStyleBackColor = true;
-            this.rdoWordsNo.CheckedChanged += new System.EventHandler(this.rdoWordsNo_CheckedChanged);
-            // 
-            // rdoWordsYes
-            // 
-            this.rdoWordsYes.AutoSize = true;
-            this.rdoWordsYes.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoWordsYes.Location = new System.Drawing.Point(11, 5);
-            this.rdoWordsYes.Name = "rdoWordsYes";
-            this.rdoWordsYes.Size = new System.Drawing.Size(58, 29);
-            this.rdoWordsYes.TabIndex = 14;
-            this.rdoWordsYes.TabStop = true;
-            this.rdoWordsYes.Text = "Yes";
-            this.rdoWordsYes.UseVisualStyleBackColor = true;
-            this.rdoWordsYes.CheckedChanged += new System.EventHandler(this.rdoWordsYes_CheckedChanged);
             // 
             // lblWords
             // 
@@ -215,7 +191,7 @@ namespace PasswordGenerator
             // 
             this.lblWordsHowMany.AutoSize = true;
             this.lblWordsHowMany.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWordsHowMany.Location = new System.Drawing.Point(511, 218);
+            this.lblWordsHowMany.Location = new System.Drawing.Point(510, 205);
             this.lblWordsHowMany.Name = "lblWordsHowMany";
             this.lblWordsHowMany.Size = new System.Drawing.Size(94, 21);
             this.lblWordsHowMany.TabIndex = 16;
@@ -226,7 +202,7 @@ namespace PasswordGenerator
             this.txtWordsHowMany.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtWordsHowMany.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWordsHowMany.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtWordsHowMany.Location = new System.Drawing.Point(611, 215);
+            this.txtWordsHowMany.Location = new System.Drawing.Point(610, 234);
             this.txtWordsHowMany.Name = "txtWordsHowMany";
             this.txtWordsHowMany.Size = new System.Drawing.Size(166, 29);
             this.txtWordsHowMany.TabIndex = 17;
@@ -249,7 +225,7 @@ namespace PasswordGenerator
             // 
             this.panelNumbers.Controls.Add(this.rdoNumbersYes);
             this.panelNumbers.Controls.Add(this.rdoNumbersNo);
-            this.panelNumbers.Location = new System.Drawing.Point(256, 112);
+            this.panelNumbers.Location = new System.Drawing.Point(190, 135);
             this.panelNumbers.Name = "panelNumbers";
             this.panelNumbers.Size = new System.Drawing.Size(167, 42);
             this.panelNumbers.TabIndex = 22;
@@ -259,7 +235,7 @@ namespace PasswordGenerator
             this.panelSymbols.Controls.Add(this.rdoSymbolsYes);
             this.panelSymbols.Controls.Add(this.rdoSymbolsYesTemp);
             this.panelSymbols.Controls.Add(this.rdoSymbolsNo);
-            this.panelSymbols.Location = new System.Drawing.Point(256, 59);
+            this.panelSymbols.Location = new System.Drawing.Point(190, 59);
             this.panelSymbols.Name = "panelSymbols";
             this.panelSymbols.Size = new System.Drawing.Size(167, 47);
             this.panelSymbols.TabIndex = 23;
@@ -279,7 +255,7 @@ namespace PasswordGenerator
             // 
             this.panelWords.Controls.Add(this.rdoWordsNo);
             this.panelWords.Controls.Add(this.rdoWordsYes);
-            this.panelWords.Location = new System.Drawing.Point(256, 205);
+            this.panelWords.Location = new System.Drawing.Point(190, 205);
             this.panelWords.Name = "panelWords";
             this.panelWords.Size = new System.Drawing.Size(167, 39);
             this.panelWords.TabIndex = 24;
@@ -288,11 +264,11 @@ namespace PasswordGenerator
             // 
             this.lblWordsEg.AutoSize = true;
             this.lblWordsEg.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWordsEg.Location = new System.Drawing.Point(608, 186);
+            this.lblWordsEg.Location = new System.Drawing.Point(607, 205);
             this.lblWordsEg.Name = "lblWordsEg";
             this.lblWordsEg.Size = new System.Drawing.Size(153, 13);
             this.lblWordsEg.TabIndex = 26;
-            this.lblWordsEg.Text = "Enter amount here (max is 5)";
+            this.lblWordsEg.Text = "Enter amount here (max is 2)";
             // 
             // btnQandA
             // 
@@ -311,7 +287,7 @@ namespace PasswordGenerator
             // 
             this.lblWord.AutoSize = true;
             this.lblWord.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWord.Location = new System.Drawing.Point(608, 202);
+            this.lblWord.Location = new System.Drawing.Point(607, 221);
             this.lblWord.Name = "lblWord";
             this.lblWord.Size = new System.Drawing.Size(96, 13);
             this.lblWord.TabIndex = 28;
@@ -417,84 +393,117 @@ namespace PasswordGenerator
             this.lblQuestion1Con.TabIndex = 39;
             this.lblQuestion1Con.Text = "Question 1";
             // 
-            // panelMaxChar
+            // panelNumbersRdo
             // 
-            this.panelMaxChar.Controls.Add(this.rdoHowLong9);
-            this.panelMaxChar.Controls.Add(this.rdoHowLong7);
-            this.panelMaxChar.Controls.Add(this.rdoHowLong3);
-            this.panelMaxChar.Controls.Add(this.rdoHowLong5);
-            this.panelMaxChar.Location = new System.Drawing.Point(256, 160);
-            this.panelMaxChar.Name = "panelMaxChar";
-            this.panelMaxChar.Size = new System.Drawing.Size(292, 39);
-            this.panelMaxChar.TabIndex = 23;
+            this.panelNumbersRdo.Controls.Add(this.rdoNumber3);
+            this.panelNumbersRdo.Controls.Add(this.rdoNumber5);
+            this.panelNumbersRdo.Location = new System.Drawing.Point(610, 135);
+            this.panelNumbersRdo.Name = "panelNumbersRdo";
+            this.panelNumbersRdo.Size = new System.Drawing.Size(131, 39);
+            this.panelNumbersRdo.TabIndex = 23;
             // 
-            // rdoHowLong7
+            // rdoNumber3
             // 
-            this.rdoHowLong7.AutoSize = true;
-            this.rdoHowLong7.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoHowLong7.Location = new System.Drawing.Point(158, 4);
-            this.rdoHowLong7.Name = "rdoHowLong7";
-            this.rdoHowLong7.Size = new System.Drawing.Size(40, 29);
-            this.rdoHowLong7.TabIndex = 12;
-            this.rdoHowLong7.TabStop = true;
-            this.rdoHowLong7.Text = "7";
-            this.rdoHowLong7.UseVisualStyleBackColor = true;
+            this.rdoNumber3.AutoSize = true;
+            this.rdoNumber3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoNumber3.Location = new System.Drawing.Point(11, 4);
+            this.rdoNumber3.Name = "rdoNumber3";
+            this.rdoNumber3.Size = new System.Drawing.Size(41, 29);
+            this.rdoNumber3.TabIndex = 10;
+            this.rdoNumber3.TabStop = true;
+            this.rdoNumber3.Text = "3";
+            this.rdoNumber3.UseVisualStyleBackColor = true;
             // 
-            // rdoHowLong3
+            // rdoNumber5
             // 
-            this.rdoHowLong3.AutoSize = true;
-            this.rdoHowLong3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoHowLong3.Location = new System.Drawing.Point(11, 4);
-            this.rdoHowLong3.Name = "rdoHowLong3";
-            this.rdoHowLong3.Size = new System.Drawing.Size(41, 29);
-            this.rdoHowLong3.TabIndex = 10;
-            this.rdoHowLong3.TabStop = true;
-            this.rdoHowLong3.Text = "3";
-            this.rdoHowLong3.UseVisualStyleBackColor = true;
+            this.rdoNumber5.AutoSize = true;
+            this.rdoNumber5.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoNumber5.Location = new System.Drawing.Point(85, 4);
+            this.rdoNumber5.Name = "rdoNumber5";
+            this.rdoNumber5.Size = new System.Drawing.Size(41, 29);
+            this.rdoNumber5.TabIndex = 11;
+            this.rdoNumber5.TabStop = true;
+            this.rdoNumber5.Text = "5";
+            this.rdoNumber5.UseVisualStyleBackColor = true;
             // 
-            // rdoHowLong5
+            // panelSymbolsRdo
             // 
-            this.rdoHowLong5.AutoSize = true;
-            this.rdoHowLong5.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoHowLong5.Location = new System.Drawing.Point(85, 4);
-            this.rdoHowLong5.Name = "rdoHowLong5";
-            this.rdoHowLong5.Size = new System.Drawing.Size(41, 29);
-            this.rdoHowLong5.TabIndex = 11;
-            this.rdoHowLong5.TabStop = true;
-            this.rdoHowLong5.Text = "5";
-            this.rdoHowLong5.UseVisualStyleBackColor = true;
+            this.panelSymbolsRdo.Controls.Add(this.rdoSymbol3);
+            this.panelSymbolsRdo.Controls.Add(this.rdoSymbol5);
+            this.panelSymbolsRdo.Location = new System.Drawing.Point(610, 59);
+            this.panelSymbolsRdo.Name = "panelSymbolsRdo";
+            this.panelSymbolsRdo.Size = new System.Drawing.Size(131, 39);
+            this.panelSymbolsRdo.TabIndex = 24;
             // 
-            // lblMaxCharLength
+            // rdoSymbol3
             // 
-            this.lblMaxCharLength.AutoSize = true;
-            this.lblMaxCharLength.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaxCharLength.Location = new System.Drawing.Point(12, 166);
-            this.lblMaxCharLength.Name = "lblMaxCharLength";
-            this.lblMaxCharLength.Size = new System.Drawing.Size(106, 25);
-            this.lblMaxCharLength.TabIndex = 9;
-            this.lblMaxCharLength.Text = "How Long?";
+            this.rdoSymbol3.AutoSize = true;
+            this.rdoSymbol3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoSymbol3.Location = new System.Drawing.Point(11, 4);
+            this.rdoSymbol3.Name = "rdoSymbol3";
+            this.rdoSymbol3.Size = new System.Drawing.Size(41, 29);
+            this.rdoSymbol3.TabIndex = 10;
+            this.rdoSymbol3.TabStop = true;
+            this.rdoSymbol3.Text = "3";
+            this.rdoSymbol3.UseVisualStyleBackColor = true;
             // 
-            // lblMaxCharLengthExplain
+            // rdoSymbol5
             // 
-            this.lblMaxCharLengthExplain.AutoSize = true;
-            this.lblMaxCharLengthExplain.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaxCharLengthExplain.Location = new System.Drawing.Point(14, 191);
-            this.lblMaxCharLengthExplain.Name = "lblMaxCharLengthExplain";
-            this.lblMaxCharLengthExplain.Size = new System.Drawing.Size(162, 13);
-            this.lblMaxCharLengthExplain.TabIndex = 29;
-            this.lblMaxCharLengthExplain.Text = "only for numbers and symbols";
+            this.rdoSymbol5.AutoSize = true;
+            this.rdoSymbol5.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoSymbol5.Location = new System.Drawing.Point(85, 4);
+            this.rdoSymbol5.Name = "rdoSymbol5";
+            this.rdoSymbol5.Size = new System.Drawing.Size(41, 29);
+            this.rdoSymbol5.TabIndex = 11;
+            this.rdoSymbol5.TabStop = true;
+            this.rdoSymbol5.Text = "5";
+            this.rdoSymbol5.UseVisualStyleBackColor = true;
             // 
-            // rdoHowLong9
+            // lblSymbolsHowMany
             // 
-            this.rdoHowLong9.AutoSize = true;
-            this.rdoHowLong9.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoHowLong9.Location = new System.Drawing.Point(240, 4);
-            this.rdoHowLong9.Name = "rdoHowLong9";
-            this.rdoHowLong9.Size = new System.Drawing.Size(41, 29);
-            this.rdoHowLong9.TabIndex = 13;
-            this.rdoHowLong9.TabStop = true;
-            this.rdoHowLong9.Text = "9";
-            this.rdoHowLong9.UseVisualStyleBackColor = true;
+            this.lblSymbolsHowMany.AutoSize = true;
+            this.lblSymbolsHowMany.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSymbolsHowMany.Location = new System.Drawing.Point(510, 68);
+            this.lblSymbolsHowMany.Name = "lblSymbolsHowMany";
+            this.lblSymbolsHowMany.Size = new System.Drawing.Size(94, 21);
+            this.lblSymbolsHowMany.TabIndex = 44;
+            this.lblSymbolsHowMany.Text = "How many?";
+            // 
+            // lblNumbersHowMany
+            // 
+            this.lblNumbersHowMany.AutoSize = true;
+            this.lblNumbersHowMany.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumbersHowMany.Location = new System.Drawing.Point(510, 144);
+            this.lblNumbersHowMany.Name = "lblNumbersHowMany";
+            this.lblNumbersHowMany.Size = new System.Drawing.Size(94, 21);
+            this.lblNumbersHowMany.TabIndex = 45;
+            this.lblNumbersHowMany.Text = "How many?";
+            // 
+            // rdoWordsYes
+            // 
+            this.rdoWordsYes.AutoSize = true;
+            this.rdoWordsYes.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoWordsYes.Location = new System.Drawing.Point(11, 5);
+            this.rdoWordsYes.Name = "rdoWordsYes";
+            this.rdoWordsYes.Size = new System.Drawing.Size(58, 29);
+            this.rdoWordsYes.TabIndex = 14;
+            this.rdoWordsYes.TabStop = true;
+            this.rdoWordsYes.Text = "Yes";
+            this.rdoWordsYes.UseVisualStyleBackColor = true;
+            this.rdoWordsYes.CheckedChanged += new System.EventHandler(this.rdoWordsYes_CheckedChanged);
+            // 
+            // rdoWordsNo
+            // 
+            this.rdoWordsNo.AutoSize = true;
+            this.rdoWordsNo.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoWordsNo.Location = new System.Drawing.Point(98, 5);
+            this.rdoWordsNo.Name = "rdoWordsNo";
+            this.rdoWordsNo.Size = new System.Drawing.Size(56, 29);
+            this.rdoWordsNo.TabIndex = 15;
+            this.rdoWordsNo.TabStop = true;
+            this.rdoWordsNo.Text = "No";
+            this.rdoWordsNo.UseVisualStyleBackColor = true;
+            this.rdoWordsNo.CheckedChanged += new System.EventHandler(this.rdoWordsNo_CheckedChanged);
             // 
             // Constraints
             // 
@@ -502,6 +511,9 @@ namespace PasswordGenerator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 530);
+            this.Controls.Add(this.lblNumbersHowMany);
+            this.Controls.Add(this.lblSymbolsHowMany);
+            this.Controls.Add(this.panelSymbolsRdo);
             this.Controls.Add(this.lblQuestion5Con);
             this.Controls.Add(this.lblQuestion4Con);
             this.Controls.Add(this.lblQuestion3Con);
@@ -512,19 +524,17 @@ namespace PasswordGenerator
             this.Controls.Add(this.txtAnswer3Con);
             this.Controls.Add(this.txtAnswer2Con);
             this.Controls.Add(this.txtAnswer1Con);
-            this.Controls.Add(this.lblMaxCharLengthExplain);
             this.Controls.Add(this.lblWord);
             this.Controls.Add(this.btnQandA);
             this.Controls.Add(this.lblWordsEg);
             this.Controls.Add(this.panelWords);
-            this.Controls.Add(this.panelMaxChar);
+            this.Controls.Add(this.panelNumbersRdo);
             this.Controls.Add(this.panelSymbols);
             this.Controls.Add(this.panelNumbers);
             this.Controls.Add(this.btnSubmitCon);
             this.Controls.Add(this.txtWordsHowMany);
             this.Controls.Add(this.lblWordsHowMany);
             this.Controls.Add(this.lblWords);
-            this.Controls.Add(this.lblMaxCharLength);
             this.Controls.Add(this.lblNumbersEg);
             this.Controls.Add(this.lblSymbolsEg);
             this.Controls.Add(this.lblNumbers);
@@ -541,8 +551,10 @@ namespace PasswordGenerator
             this.panelSymbols.PerformLayout();
             this.panelWords.ResumeLayout(false);
             this.panelWords.PerformLayout();
-            this.panelMaxChar.ResumeLayout(false);
-            this.panelMaxChar.PerformLayout();
+            this.panelNumbersRdo.ResumeLayout(false);
+            this.panelNumbersRdo.PerformLayout();
+            this.panelSymbolsRdo.ResumeLayout(false);
+            this.panelSymbolsRdo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,8 +571,6 @@ namespace PasswordGenerator
         private System.Windows.Forms.Label lblNumbers;
         private System.Windows.Forms.Label lblSymbolsEg;
         private System.Windows.Forms.Label lblNumbersEg;
-        private System.Windows.Forms.RadioButton rdoWordsNo;
-        private System.Windows.Forms.RadioButton rdoWordsYes;
         private System.Windows.Forms.Label lblWords;
         private System.Windows.Forms.Label lblWordsHowMany;
         private System.Windows.Forms.TextBox txtWordsHowMany;
@@ -581,13 +591,16 @@ namespace PasswordGenerator
         private System.Windows.Forms.Label lblQuestion3Con;
         private System.Windows.Forms.Label lblQuestion2Con;
         private System.Windows.Forms.Label lblQuestion1Con;
-        private System.Windows.Forms.Panel panelMaxChar;
-        private System.Windows.Forms.RadioButton rdoHowLong3;
-        private System.Windows.Forms.RadioButton rdoHowLong5;
-        private System.Windows.Forms.Label lblMaxCharLength;
-        private System.Windows.Forms.Label lblMaxCharLengthExplain;
-        private System.Windows.Forms.RadioButton rdoHowLong7;
+        private System.Windows.Forms.Panel panelNumbersRdo;
+        private System.Windows.Forms.RadioButton rdoNumber3;
+        private System.Windows.Forms.RadioButton rdoNumber5;
         private System.Windows.Forms.RadioButton rdoSymbolsYes;
-        private System.Windows.Forms.RadioButton rdoHowLong9;
+        private System.Windows.Forms.Panel panelSymbolsRdo;
+        private System.Windows.Forms.RadioButton rdoSymbol3;
+        private System.Windows.Forms.RadioButton rdoSymbol5;
+        private System.Windows.Forms.Label lblSymbolsHowMany;
+        private System.Windows.Forms.Label lblNumbersHowMany;
+        private System.Windows.Forms.RadioButton rdoWordsNo;
+        private System.Windows.Forms.RadioButton rdoWordsYes;
     }
 }
