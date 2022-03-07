@@ -34,6 +34,9 @@ namespace PasswordGenerator
             this.btnGeneratePassword = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnPreviousPasswords = new System.Windows.Forms.Button();
+            this.lblPassword1 = new System.Windows.Forms.Label();
+            this.lblPassword2 = new System.Windows.Forms.Label();
+            this.lblPassword3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblPasswordGen
@@ -96,12 +99,45 @@ namespace PasswordGenerator
             this.btnPreviousPasswords.UseVisualStyleBackColor = false;
             this.btnPreviousPasswords.Click += new System.EventHandler(this.btnPreviousPasswords_Click);
             // 
+            // lblPassword1
+            // 
+            this.lblPassword1.AutoSize = true;
+            this.lblPassword1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F);
+            this.lblPassword1.Location = new System.Drawing.Point(30, 163);
+            this.lblPassword1.Name = "lblPassword1";
+            this.lblPassword1.Size = new System.Drawing.Size(105, 25);
+            this.lblPassword1.TabIndex = 5;
+            this.lblPassword1.Text = "Password 1";
+            // 
+            // lblPassword2
+            // 
+            this.lblPassword2.AutoSize = true;
+            this.lblPassword2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F);
+            this.lblPassword2.Location = new System.Drawing.Point(30, 207);
+            this.lblPassword2.Name = "lblPassword2";
+            this.lblPassword2.Size = new System.Drawing.Size(108, 25);
+            this.lblPassword2.TabIndex = 6;
+            this.lblPassword2.Text = "Password 2";
+            // 
+            // lblPassword3
+            // 
+            this.lblPassword3.AutoSize = true;
+            this.lblPassword3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F);
+            this.lblPassword3.Location = new System.Drawing.Point(28, 248);
+            this.lblPassword3.Name = "lblPassword3";
+            this.lblPassword3.Size = new System.Drawing.Size(108, 25);
+            this.lblPassword3.TabIndex = 7;
+            this.lblPassword3.Text = "Password 3";
+            // 
             // WelcomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblPassword3);
+            this.Controls.Add(this.lblPassword2);
+            this.Controls.Add(this.lblPassword1);
             this.Controls.Add(this.btnPreviousPasswords);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnGeneratePassword);
@@ -122,6 +158,9 @@ namespace PasswordGenerator
         private System.Windows.Forms.Button btnGeneratePassword;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnPreviousPasswords;
+        private System.Windows.Forms.Label lblPassword1;
+        private System.Windows.Forms.Label lblPassword2;
+        private System.Windows.Forms.Label lblPassword3;
     }
 }
 

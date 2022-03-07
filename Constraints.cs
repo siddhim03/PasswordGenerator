@@ -214,6 +214,23 @@ namespace PasswordGenerator
             this.panelWords.Controls.Add(rdoWordsNo);
         }
 
+        private void messageBoxError()
+        {
+            if (!rdoNumber3.Checked && !rdoNumber5.Checked)
+            {
+                MessageBox.Show("Please select length for Numbers", "Error");
+                return;
+
+            }
+
+            if (!rdoSymbol3.Checked && !rdoSymbol5.Checked)
+            {
+                MessageBox.Show("Please select length for Symbols", "Error");
+                return;
+
+            }
+        }
+
         private void storeSymbolsNubmers()
         {
             if (rdoSymbolsYes.Checked == true)
@@ -240,6 +257,8 @@ namespace PasswordGenerator
                 rdoSymbol3.Enabled = true;
                 rdoSymbol5.Enabled = true;
 
+                this.messageBoxError();
+
                 if (rdoSymbol3.Checked == true)
                 {
                     inputSymbolRdo = rdoSymbol3.Text;
@@ -264,6 +283,8 @@ namespace PasswordGenerator
             {
                 rdoNumber3.Enabled = true;
                 rdoNumber5.Enabled = true;
+
+                this.messageBoxError();
 
                 if (rdoNumber3.Checked == true)
                 {
@@ -385,8 +406,8 @@ namespace PasswordGenerator
             return false;
         }
 
-        public string[] symbolsList = { "!", "@", "#", "$", "%", "^", "&", "*", "=", "-", "_", "/",
-            "+", ":", ";", "(", ")", "{", "}", "[", "]", "|", "~" , "."};
+        public string[] symbolsList = { "!", "@", "#", "$", "%", "&", "*", "=", "-", "_", "/",
+            "+", ":", ";", "~" };
 
         public string[] wordList = { word1, word2, word3, word4, word5 };
 
@@ -549,7 +570,319 @@ namespace PasswordGenerator
                         }
                     }
                 }
-                    
+                else if(maxWordValue == 2)
+                {
+                    if (rdoSymbolsNo.Checked == true)
+                    {
+                        if (rdoNumbersNo.Checked == true)
+                        {
+                            password1 = word1 + word2;
+                            password2 = word2 + word1;
+                            password3 = word1 + word2;
+                        }
+                        else
+                        {
+                            if (rdoNumber3.Equals("3"))
+                            {
+                                password1 = word1 + nums1 + nums2 + nums3 + word2;
+                                password2 = word2 + nums2 + nums3 + word1 + nums1;
+                                password3 = nums3 + word2 + nums1 + nums2 + word1;
+                            }
+                            else
+                            {
+                                password1 = word1 + nums1 + nums2 + nums3 + nums4 + nums5 + word2;
+                                password2 = nums5 + nums3 + word2 + nums4 + nums1 + nums2 + word1;
+                                password3 = word2+ nums5 + nums4 + nums3 + word1 + nums2 + nums1;
+                            }
+                        }
+                    }
+                    else if (rdoNumbersNo.Checked == true)
+                    {
+                        if (inputSymbolRdo.Equals("3"))
+                        {
+                            password1 = word1 + symbol1 + symbol2 + symbol3 + word2;
+                            password2 = word2+ symbol2 + symbol3 + symbol1 + word1;
+                            password3 = symbol3 + word1 + symbol1 + word2 +  symbol2;
+                        }
+                        else
+                        {
+                            password1 = word1 + symbol1 + symbol2 + symbol3 + symbol4 + symbol5 + word2;
+                            password2 = symbol5 + symbol3 + word2 + symbol4 + symbol1 + symbol2 + word1;
+                            password3 = word2 + symbol5 + symbol4 + symbol3 + word1 + symbol2 + symbol1;
+                        }
+                    }
+                    else
+                    {
+                        if (inputSymbolRdo.Equals("3"))
+                        {
+                            if (inputNumberRdo.Equals("3"))
+                            {
+                                password1 = word1 + symbol1 + symbol2 + symbol3 + nums1 + nums2 + nums3 + word2;
+                                password2 = word2 + nums2 + nums3 + nums1 + symbol2 + symbol3 + symbol1 + word1;
+                                password3 = nums1 + symbol3 + word1 + nums3 + nums2 + symbol1 + word2 + symbol2;
+                            }
+                            //numbers = 5
+                            else
+                            {
+                                password1 = word1 + symbol1 + symbol2 + symbol3 + nums1 + nums2 + nums3 + nums4 + nums5 + word2;
+                                password2 = word2 + nums4 + nums5 + nums2 + nums3 + nums1 + symbol2 + symbol3 + symbol1 + word1;
+                                password3 = nums1 + symbol3 + word1 + nums3 + nums2 + symbol1 + word2 + symbol2 + nums5 + nums4;
+                            }
+                        }
+                        //symbols = 5 
+                        else
+                        {
+                            if (inputNumberRdo.Equals("3"))
+                            {
+                                password1 = word1 + symbol1 + symbol2 + symbol3 + symbol4 + symbol5 + nums1 + nums2 + nums3 + word2;
+                                password2 = nums1 + nums2 + word2 + nums3 + symbol5 + symbol3 + symbol4 + symbol1 + symbol2 + word1;
+                                password3 = symbol5 + word2 + symbol4 + nums2 + nums3 + nums1 + symbol3 + word1 + symbol2 + symbol1;
+                            }
+                            //numbers = 5
+                            else
+                            {
+                                password1 = word1 + symbol1 + symbol2 + symbol3 + symbol4 + symbol5 + nums1 + nums2 + nums3 + nums4 + nums5 + word2;
+                                password2 = nums1 + word2 + nums2 + nums3 + nums4 + nums5 + symbol5 + symbol3 + symbol4 + symbol1 + symbol2 + word1;
+                                password3 = symbol5 + symbol4 + nums2 + word2 + nums3 + nums1 + symbol3 + word1 + symbol2 + symbol1 + nums4 + nums5;
+                            }
+                        }
+                    }
+                }
+                else if(maxWordValue == 3)
+                {
+                    if (rdoSymbolsNo.Checked == true)
+                    {
+                        if (rdoNumbersNo.Checked == true)
+                        {
+                            password1 = word1 + word2 + word3;
+                            password2 = word2 + word3 + word1;
+                            password3 = word3 + word1 + word2;
+                        }
+                        else
+                        {
+                            if (rdoNumber3.Equals("3"))
+                            {
+                                password1 = word1 + nums1 + word3 + nums2 + nums3 + word2;
+                                password2 = word2 + nums2 + nums3 + word1 + nums1 + word3;
+                                password3 = nums3 + word2 + nums1 + word3 + nums2 + word1;
+                            }
+                            else
+                            {
+                                password1 = word1 + nums1 + nums2 + word3 + nums3 + nums4 + nums5 + word2;
+                                password2 = word3 + nums5 + nums3 + word2 + nums4 + nums1 + nums2 + word1;
+                                password3 = word2 + nums5 + nums4 + nums3 + word1 + nums2 + nums1 + word3;
+                            }
+                        }
+                    }
+                    else if (rdoNumbersNo.Checked == true)
+                    {
+                        if (inputSymbolRdo.Equals("3"))
+                        {
+                            password1 = word1 + symbol1 + word3 + symbol2 + symbol3 + word2;
+                            password2 = word2 + symbol2 + symbol3 + word3 + symbol1 + word1;
+                            password3 = symbol3 + word1 + symbol1 + word2 + symbol2 + word3;
+                        }
+                        else
+                        {
+                            password1 = word1 + symbol1 + symbol2 + word3 + symbol3 + symbol4 + symbol5 + word2;
+                            password2 = word3 + symbol5 + symbol3 + word2 + symbol4 + symbol1 + symbol2 + word1;
+                            password3 = word2 + symbol5 + symbol4 + symbol3 + word1 + symbol2 + symbol1 + word3;
+                        }
+                    }
+                    else
+                    {
+                        if (inputSymbolRdo.Equals("3"))
+                        {
+                            if (inputNumberRdo.Equals("3"))
+                            {
+                                password1 = word1 + symbol1 + symbol2 + word3 + symbol3 + nums1 + nums2 + nums3 + word2;
+                                password2 = word2 + nums2 + nums3 + nums1 + symbol2 + word3 + symbol3 + symbol1 + word1;
+                                password3 = nums1 + symbol3 + word1 + nums3 + word3 + nums2 + symbol1 + word2 + symbol2;
+                            }
+                            //numbers = 5
+                            else
+                            {
+                                password1 = word1 + symbol1 + symbol2 + symbol3 + nums1 + nums2 + word3 + nums3 + nums4 + nums5 + word2;
+                                password2 = word2 + nums4 + nums5 + nums2 + word3 + nums3 + nums1 + symbol2 + symbol3 + symbol1 + word1;
+                                password3 = nums1 + symbol3 + word1 + nums3 + nums2 + symbol1 + word2 + symbol2 + nums5 + word3 + nums4;
+                            }
+                        }
+                        //symbols = 5 
+                        else
+                        {
+                            if (inputNumberRdo.Equals("3"))
+                            {
+                                password1 = word1 + symbol1 + symbol2 + symbol3 + word3 + symbol4 + symbol5 + nums1 + nums2 + nums3 + word2;
+                                password2 = nums1 + nums2 + word2 + nums3 + symbol5 + symbol3 + word3 + symbol4 + symbol1 + symbol2 + word1;
+                                password3 = symbol5 + word2 + symbol4 + nums2 + nums3 + nums1 + symbol3 + word1 + symbol2 + symbol1 + word3;
+                            }
+                            //numbers = 5
+                            else
+                            {
+                                password1 = word1 + symbol1 + symbol2 + word3 + symbol3 + symbol4 + symbol5 + nums1 + nums2 + nums3 + nums4 + nums5 + word2;
+                                password2 = nums1 + word2 + nums2 + nums3 + nums4 + nums5 + word3 + symbol5 + symbol3 + symbol4 + symbol1 + symbol2 + word1;
+                                password3 = symbol5 + symbol4 + nums2 + word2 + nums3 + nums1 + symbol3 + word1 + symbol2 + symbol1 + word3 + nums4 + nums5;
+                            }
+                        }
+                    }
+                }
+                else if(maxWordValue == 4)
+                {
+                    if (rdoSymbolsNo.Checked == true)
+                    {
+                        if (rdoNumbersNo.Checked == true)
+                        {
+                            password1 = word1 + word3 + word2 + word4;
+                            password2 = word4 + word2 + word1 + word3;
+                            password3 = word3 + word1 + word4 + word2;
+                        }
+                        else
+                        {
+                            if (rdoNumber3.Equals("3"))
+                            {
+                                password1 = word1 + nums1 + word3 + nums2 + word4 + nums3 + word2;
+                                password2 = word2 + nums2 + word4 + nums3 + word1 + nums1 + word3;
+                                password3 = word4 + nums3 + word2 + nums1 + word3 + nums2 + word1;
+                            }
+                            else
+                            {
+                                password1 = word1 + nums1 + nums2 + word3 + nums3 + nums4 + word4 + nums5 + word2;
+                                password2 = word3 + nums5 + nums3 + word2 + nums4 + nums1 + word4 + nums2 + word1;
+                                password3 = word2 + nums5 + word4 + nums4 + nums3 + word1 + nums2 + nums1 + word3;
+                            }
+                        }
+                    }
+                    else if (rdoNumbersNo.Checked == true)
+                    {
+                        if (inputSymbolRdo.Equals("3"))
+                        {
+                            password1 = word1 + symbol1 + word3 + symbol2 + word4 + symbol3 + word2;
+                            password2 = word2 + symbol2 + word4 + symbol3 + word3 + symbol1 + word1;
+                            password3 = word4 + symbol3 + word1 + symbol1 + word2 + symbol2 + word3;
+                        }
+                        else
+                        {
+                            password1 = word1 + symbol1 + symbol2 + word3 + symbol3 + word4 + symbol4 + symbol5 + word2;
+                            password2 = word3 + symbol5 + word4 + symbol3 + word2 + symbol4 + symbol1 + symbol2 + word1;
+                            password3 = word2 + symbol5 + symbol4 + symbol3 + word1 + symbol2 + word4 + symbol1 + word3;
+                        }
+                    }
+                    else
+                    {
+                        if (inputSymbolRdo.Equals("3"))
+                        {
+                            if (inputNumberRdo.Equals("3"))
+                            {
+                                password1 = word1 + symbol1 + symbol2 + word3 + symbol3 + nums1 + word4 + nums2 + nums3 + word2;
+                                password2 = word2 + nums2 + nums3 + word4 + nums1 + symbol2 + word3 + symbol3 + symbol1 + word1;
+                                password3 = nums1 + symbol3 + word1 + nums3 + word3 + nums2 + symbol1 + word2 + symbol2 + word4;
+                            }
+                            //numbers = 5
+                            else
+                            {
+                                password1 = word1 + symbol1 + symbol2 + word4 + symbol3 + nums1 + nums2 + word3 + nums3 + nums4 + nums5 + word2;
+                                password2 = word2 + nums4 + nums5 + nums2 + word3 + nums3 + nums1 + word4 + symbol2 + symbol3 + symbol1 + word1;
+                                password3 = nums1 + symbol3 + word1 + nums3 + word4 + nums2 + symbol1 + word2 + symbol2 + nums5 + word3 + nums4;
+                            }
+                        }
+                        //symbols = 5 
+                        else
+                        {
+                            if (inputNumberRdo.Equals("3"))
+                            {
+                                password1 = word1 + symbol1 + symbol2 + word4 + symbol3 + word3 + symbol4 + symbol5 + nums1 + nums2 + nums3 + word2;
+                                password2 = nums1 + nums2 + word2 + nums3 + symbol5 + symbol3 + word3 + symbol4 + word4 + symbol1 + symbol2 + word1;
+                                password3 = symbol5 + word2 + symbol4 + nums2 + nums3 + word4 + nums1 + symbol3 + word1 + symbol2 + symbol1 + word3;
+                            }
+                            //numbers = 5
+                            else
+                            {
+                                password1 = word1 + symbol1 + symbol2 + word3 + symbol3 + symbol4 + word4 + symbol5 + nums1 + nums2 + nums3 + nums4 + nums5 + word2;
+                                password2 = nums1 + word2 + nums2 + nums3 + nums4 + nums5 + word3 + symbol5 + symbol3 + symbol4 + word4 + symbol1 + symbol2 + word1;
+                                password3 = symbol5 + word4 + symbol4 + nums2 + word2 + nums3 + nums1 + symbol3 + word1 + symbol2 + symbol1 + word3 + nums4 + nums5;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    if (rdoSymbolsNo.Checked == true)
+                    {
+                        if (rdoNumbersNo.Checked == true)
+                        {
+                            password1 = word1 + word2 + word3 + word4 + word5;
+                            password2 = word5 + word1 + word2 + word3 + word4;
+                            password3 = word3 + word4 + word5 + word1 + word2;
+                        }
+                        else
+                        {
+                            if (rdoNumber3.Equals("3"))
+                            {
+                                password1 = word1 + word5 + nums1 + word3 + nums2 + word4 + nums3 + word2;
+                                password2 = word2 + nums2 + word4 + word5 + nums3 + word1 + nums1 + word3;
+                                password3 = word4 + nums3 + word2 + nums1 + word3 + nums2 + word5 + word1;
+                            }
+                            else
+                            {
+                                password1 = word1 + nums1 + word5 + nums2 + word3 + nums3 + nums4 + word4 + nums5 + word2;
+                                password2 = word3 + nums5 + nums3 + word2 + nums4 + word5 + nums1 + word4 + nums2 + word1;
+                                password3 = word2 + nums5 + word4 + nums4 + word5 + nums3 + word1 + nums2 + nums1 + word3;
+                            }
+                        }
+                    }
+                    else if (rdoNumbersNo.Checked == true)
+                    {
+                        if (inputSymbolRdo.Equals("3"))
+                        {
+                            password1 = word1 + symbol1 + word3 + symbol2 + word4 + symbol3 + word2 + word5;
+                            password2 = word2 + symbol2 + word4 + symbol3 + word5 + word3 + symbol1 + word1;
+                            password3 = word4 + symbol3 + word5 + word1 + symbol1 + word2 + symbol2 + word3;
+                        }
+                        else
+                        {
+                            password1 = word1 + symbol1 + word5 + symbol2 + word3 + symbol3 + word4 + symbol4 + symbol5 + word2;
+                            password2 = word3 + symbol5 + word4 + symbol3 + word2 + symbol4 + word5 + symbol1 + symbol2 + word1;
+                            password3 = word2 + symbol5 + symbol4 + word5 + symbol3 + word1 + symbol2 + word4 + symbol1 + word3;
+                        }
+                    }
+                    else
+                    {
+                        if (inputSymbolRdo.Equals("3"))
+                        {
+                            if (inputNumberRdo.Equals("3"))
+                            {
+                                password1 = word1 + symbol1 + word5 + symbol2 + word3 + symbol3 + nums1 + word4 + nums2 + nums3 + word2;
+                                password2 = word2 + nums2 + nums3 + word4 + nums1 + symbol2 + word3 + symbol3 + word5 + symbol1 + word1;
+                                password3 = word5 + nums1 + symbol3 + word1 + nums3 + word3 + nums2 + symbol1 + word2 + symbol2 + word4;
+                            }
+                            //numbers = 5
+                            else
+                            {
+                                password1 = word1 + symbol1 + word5 + symbol2 + word4 + symbol3 + nums1 + nums2 + word3 + nums3 + nums4 + nums5 + word2;
+                                password2 = word2 + nums4 + nums5 + nums2 + word3 + nums3 + nums1 + word4 + symbol2 + symbol3 + word5 + symbol1 + word1;
+                                password3 = nums1 + symbol3 + word1 + nums3 + word4 + nums2 + word5 + symbol1 + word2 + symbol2 + nums5 + word3 + nums4;
+                            }
+                        }
+                        //symbols = 5 
+                        else
+                        {
+                            if (inputNumberRdo.Equals("3"))
+                            {
+                                password1 = word1 + symbol1 + word5 + symbol2 + word4 + symbol3 + word3 + symbol4 + symbol5 + nums1 + nums2 + nums3 + word2;
+                                password2 = nums1 + nums2 + word2 + nums3 + word5 + symbol5 + symbol3 + word3 + symbol4 + word4 + symbol1 + symbol2 + word1;
+                                password3 = symbol5 + word2 + symbol4 + nums2 + nums3 + word4 + nums1 + symbol3 + word1 + symbol2 + word5 + symbol1 + word3;
+                            }
+                            //numbers = 5
+                            else
+                            {
+                                password1 = word1 + symbol1 + symbol2 + word3 + symbol3 + symbol4 + word4 + symbol5 + nums1 + word5 + nums2 + nums3 + nums4 + nums5 + word2;
+                                password2 = nums1 + word2 + nums2 + nums3 + word5 + nums4 + nums5 + word3 + symbol5 + symbol3 + symbol4 + word4 + symbol1 + symbol2 + word1;
+                                password3 = symbol5 + word4 + symbol4 + nums2 + word2 + nums3 + word5 + nums1 + symbol3 + word1 + symbol2 + symbol1 + word3 + nums4 + nums5;
+                            }
+                        }
+                    }
+                }
+
             }
             
         }
@@ -558,22 +891,42 @@ namespace PasswordGenerator
         {
             get
             {
-                return password1 + password1Num;
+                if (password1Num != 0)
+                {
+                    return password1Num.ToString();
+                }
+                else
+                {
+                    return password1;
+                }
             }
         }
-
         public string GetPassword2
         {
             get
             {
-                return password2 + password2Num;
+                if (password2Num != 0)
+                {
+                    return password2Num.ToString();
+                }
+                else
+                {
+                    return password2;
+                }
             }
         }
         public string GetPassword3
         {
             get
             {
-                return password2 + password3Num;
+                if (password3Num != 0)
+                {
+                    return password3Num.ToString();
+                }
+                else
+                {
+                    return password3;
+                }
             }
         }
 
