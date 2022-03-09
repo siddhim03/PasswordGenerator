@@ -32,8 +32,9 @@ namespace PasswordGenerator
             this.lblPreviousPasswords = new System.Windows.Forms.Label();
             this.btnExitPrevPwrd = new System.Windows.Forms.Button();
             this.lblYourPreviousPasswords = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblPPassword3 = new System.Windows.Forms.Label();
+            this.lblPPassword2 = new System.Windows.Forms.Label();
+            this.lblPPassword1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblPreviousPasswords
@@ -70,13 +71,35 @@ namespace PasswordGenerator
             this.lblYourPreviousPasswords.TabIndex = 5;
             this.lblYourPreviousPasswords.Text = "Your Previous Passwords:-";
             // 
-            // dataGridView1
+            // lblPPassword3
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 141);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(355, 221);
-            this.dataGridView1.TabIndex = 6;
+            this.lblPPassword3.AutoSize = true;
+            this.lblPPassword3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F);
+            this.lblPPassword3.Location = new System.Drawing.Point(27, 226);
+            this.lblPPassword3.Name = "lblPPassword3";
+            this.lblPPassword3.Size = new System.Drawing.Size(108, 25);
+            this.lblPPassword3.TabIndex = 10;
+            this.lblPPassword3.Text = "Password 3";
+            // 
+            // lblPPassword2
+            // 
+            this.lblPPassword2.AutoSize = true;
+            this.lblPPassword2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F);
+            this.lblPPassword2.Location = new System.Drawing.Point(29, 185);
+            this.lblPPassword2.Name = "lblPPassword2";
+            this.lblPPassword2.Size = new System.Drawing.Size(108, 25);
+            this.lblPPassword2.TabIndex = 9;
+            this.lblPPassword2.Text = "Password 2";
+            // 
+            // lblPPassword1
+            // 
+            this.lblPPassword1.AutoSize = true;
+            this.lblPPassword1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F);
+            this.lblPPassword1.Location = new System.Drawing.Point(29, 141);
+            this.lblPPassword1.Name = "lblPPassword1";
+            this.lblPPassword1.Size = new System.Drawing.Size(105, 25);
+            this.lblPPassword1.TabIndex = 8;
+            this.lblPPassword1.Text = "Password 1";
             // 
             // PreviousPasswords
             // 
@@ -84,14 +107,15 @@ namespace PasswordGenerator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lblPPassword3);
+            this.Controls.Add(this.lblPPassword2);
+            this.Controls.Add(this.lblPPassword1);
             this.Controls.Add(this.lblYourPreviousPasswords);
             this.Controls.Add(this.btnExitPrevPwrd);
             this.Controls.Add(this.lblPreviousPasswords);
             this.Name = "PreviousPasswords";
             this.Text = "Previous Passwords";
             this.Load += new System.EventHandler(this.PreviousPasswords_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +126,8 @@ namespace PasswordGenerator
         private System.Windows.Forms.Label lblPreviousPasswords;
         private System.Windows.Forms.Button btnExitPrevPwrd;
         private System.Windows.Forms.Label lblYourPreviousPasswords;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblPPassword3;
+        private System.Windows.Forms.Label lblPPassword2;
+        private System.Windows.Forms.Label lblPPassword1;
     }
 }

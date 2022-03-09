@@ -74,6 +74,8 @@ namespace PasswordGenerator
             }
         }
 
+        public string[] passList = { pass1, pass2, pass3 };
+
         private void btnPreviousPasswords_Click(object sender, EventArgs e)
         {
             PreviousPasswords prevPasswordsForm = new PreviousPasswords();

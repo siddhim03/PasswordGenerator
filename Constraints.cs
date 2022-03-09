@@ -30,10 +30,6 @@ namespace PasswordGenerator
         public string password2;
         public string password3;
 
-        public int password1Num;
-        public int password2Num;
-        public int password3Num;
-
 
         //methods
         public Constraints()
@@ -72,8 +68,6 @@ namespace PasswordGenerator
 
             this.rdoSymbolsYes.Checked = false;
             this.rdoSymbolsNo.Checked = false;
-
-            //this.DisplayHowLong(false);
 
         }
         private void setControls()
@@ -216,19 +210,26 @@ namespace PasswordGenerator
 
         private void messageBoxError()
         {
-            if (!rdoNumber3.Checked && !rdoNumber5.Checked)
+            if (rdoNumbersYes.Checked == true)
             {
-                MessageBox.Show("Please select length for Numbers", "Error");
-                return;
+                if (!rdoNumber3.Checked && !rdoNumber5.Checked)
+                {
+                    MessageBox.Show("Please select length for Numbers", "Error");
+                    return;
 
+                }
             }
 
-            if (!rdoSymbol3.Checked && !rdoSymbol5.Checked)
+            if (rdoSymbolsYes.Checked == true)
             {
-                MessageBox.Show("Please select length for Symbols", "Error");
-                return;
+                if (!rdoSymbol3.Checked && !rdoSymbol5.Checked)
+                {
+                    MessageBox.Show("Please select length for Symbols", "Error");
+                    return;
 
+                }
             }
+            
         }
 
         private void storeSymbolsNubmers()
@@ -416,11 +417,11 @@ namespace PasswordGenerator
             Random rnd = new Random();
 
             //numbers
-            int nums1 = rnd.Next(0, 10);
-            int nums2 = rnd.Next(0, 10);
-            int nums3 = rnd.Next(0, 10);
-            int nums4 = rnd.Next(0, 10);
-            int nums5 = rnd.Next(0, 10);
+            string nums1 = rnd.Next(0, 10).ToString();
+            string nums2 = rnd.Next(0, 10).ToString();
+            string nums3 = rnd.Next(0, 10).ToString();
+            string nums4 = rnd.Next(0, 10).ToString();
+            string nums5 = rnd.Next(0, 10).ToString();
 
             //symbols
             int initialValue1 = rnd.Next(symbolsList.Length);
@@ -449,15 +450,15 @@ namespace PasswordGenerator
                     {
                         if (inputNumberRdo.Equals("3"))
                         {
-                            password1Num = nums1 + nums2 + nums3;
-                            password2Num = nums2 + nums3 + nums1;
-                            password3Num = nums3 + nums1 + nums2;
+                            password1 = nums1 + nums2 + nums3;
+                            password2 = nums2 + nums3 + nums1;
+                            password3 = nums3 + nums1 + nums2;
                         }
                         else
                         {
-                            password1Num = nums1 + nums2 + nums3 + nums4 + nums5;
-                            password2Num = nums5 + nums3 + nums4 + nums1 + nums2;
-                            password3Num = nums5 + nums4 + nums3 + nums2 + nums1;
+                            password1 = nums1 + nums2 + nums3 + nums4 + nums5;
+                            password2 = nums5 + nums3 + nums4 + nums1 + nums2;
+                            password3 = nums5 + nums4 + nums3 + nums2 + nums1;
                         }
                     }
                 }
@@ -504,7 +505,7 @@ namespace PasswordGenerator
                         }
                         else
                         {
-                            if (rdoNumber3.Equals("3"))
+                            if (inputNumberRdo.Equals("3"))
                             {
                                 password1 = word1 + nums1 + nums2 + nums3;
                                 password2 = nums2 + nums3 + word1 + nums1;
@@ -582,7 +583,7 @@ namespace PasswordGenerator
                         }
                         else
                         {
-                            if (rdoNumber3.Equals("3"))
+                            if (inputNumberRdo.Equals("3"))
                             {
                                 password1 = word1 + nums1 + nums2 + nums3 + word2;
                                 password2 = word2 + nums2 + nums3 + word1 + nums1;
@@ -660,7 +661,7 @@ namespace PasswordGenerator
                         }
                         else
                         {
-                            if (rdoNumber3.Equals("3"))
+                            if (inputNumberRdo.Equals("3"))
                             {
                                 password1 = word1 + nums1 + word3 + nums2 + nums3 + word2;
                                 password2 = word2 + nums2 + nums3 + word1 + nums1 + word3;
@@ -738,7 +739,7 @@ namespace PasswordGenerator
                         }
                         else
                         {
-                            if (rdoNumber3.Equals("3"))
+                            if (inputNumberRdo.Equals("3"))
                             {
                                 password1 = word1 + nums1 + word3 + nums2 + word4 + nums3 + word2;
                                 password2 = word2 + nums2 + word4 + nums3 + word1 + nums1 + word3;
@@ -816,7 +817,7 @@ namespace PasswordGenerator
                         }
                         else
                         {
-                            if (rdoNumber3.Equals("3"))
+                            if (inputNumberRdo.Equals("3"))
                             {
                                 password1 = word1 + word5 + nums1 + word3 + nums2 + word4 + nums3 + word2;
                                 password2 = word2 + nums2 + word4 + word5 + nums3 + word1 + nums1 + word3;
@@ -891,42 +892,21 @@ namespace PasswordGenerator
         {
             get
             {
-                if (password1Num != 0)
-                {
-                    return password1Num.ToString();
-                }
-                else
-                {
-                    return password1;
-                }
+                return password1;
             }
         }
         public string GetPassword2
         {
             get
             {
-                if (password2Num != 0)
-                {
-                    return password2Num.ToString();
-                }
-                else
-                {
-                    return password2;
-                }
+                return password2;
             }
         }
         public string GetPassword3
         {
             get
             {
-                if (password3Num != 0)
-                {
-                    return password3Num.ToString();
-                }
-                else
-                {
-                    return password3;
-                }
+                return password3;
             }
         }
 

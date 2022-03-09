@@ -12,6 +12,11 @@ namespace PasswordGenerator
 {
     public partial class PreviousPasswords : Form
     {
+        //variables
+        public static string pass1;
+        public static string pass2;
+        public static string pass3;
+
         public PreviousPasswords()
         {
             InitializeComponent();
@@ -26,6 +31,12 @@ namespace PasswordGenerator
         {
             this.CenterToScreen();
             this.setControls();
+
+            this.lblPPassword1.Text = pass1;
+
+            this.lblPPassword2.Text = pass2;
+
+            this.lblPPassword3.Text = pass3;
         }
 
         private void setControls()
