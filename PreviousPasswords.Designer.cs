@@ -75,7 +75,7 @@ namespace PasswordGenerator
             // 
             this.lblPPassword3.AutoSize = true;
             this.lblPPassword3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F);
-            this.lblPPassword3.Location = new System.Drawing.Point(27, 226);
+            this.lblPPassword3.Location = new System.Drawing.Point(29, 222);
             this.lblPPassword3.Name = "lblPPassword3";
             this.lblPPassword3.Size = new System.Drawing.Size(108, 25);
             this.lblPPassword3.TabIndex = 10;

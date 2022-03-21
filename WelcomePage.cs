@@ -56,8 +56,6 @@ namespace PasswordGenerator
 
             using (constraintsForm)
             {
-                constraintsForm.maxWordValue = this.maxWordValue;
-
                 lblPassword1.Visible = true;
                 lblPassword2.Visible = true;
                 lblPassword3.Visible = true;
