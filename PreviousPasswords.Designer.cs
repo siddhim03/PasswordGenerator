@@ -35,6 +35,10 @@ namespace PasswordGenerator
             this.lblPPassword3 = new System.Windows.Forms.Label();
             this.lblPPassword2 = new System.Windows.Forms.Label();
             this.lblPPassword1 = new System.Windows.Forms.Label();
+            this.dgvPass = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPass)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPreviousPasswords
@@ -101,12 +105,35 @@ namespace PasswordGenerator
             this.lblPPassword1.TabIndex = 8;
             this.lblPPassword1.Text = "Password 1";
             // 
+            // dgvPass
+            // 
+            this.dgvPass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPass.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            this.dgvPass.Location = new System.Drawing.Point(156, 141);
+            this.dgvPass.Name = "dgvPass";
+            this.dgvPass.Size = new System.Drawing.Size(443, 280);
+            this.dgvPass.TabIndex = 11;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Password Number";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Password";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 300;
+            // 
             // PreviousPasswords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvPass);
             this.Controls.Add(this.lblPPassword3);
             this.Controls.Add(this.lblPPassword2);
             this.Controls.Add(this.lblPPassword1);
@@ -116,6 +143,7 @@ namespace PasswordGenerator
             this.Name = "PreviousPasswords";
             this.Text = "Previous Passwords";
             this.Load += new System.EventHandler(this.PreviousPasswords_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +157,8 @@ namespace PasswordGenerator
         private System.Windows.Forms.Label lblPPassword3;
         private System.Windows.Forms.Label lblPPassword2;
         private System.Windows.Forms.Label lblPPassword1;
+        private System.Windows.Forms.DataGridView dgvPass;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

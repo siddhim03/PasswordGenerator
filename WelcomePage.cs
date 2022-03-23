@@ -78,6 +78,10 @@ namespace PasswordGenerator
         {
             PreviousPasswords prevPasswordsForm = new PreviousPasswords();
 
+            prevPasswordsForm.pass1 = this.lblPassword1.Text.Trim();
+            prevPasswordsForm.pass2 = this.lblPassword2.Text.Trim();
+            prevPasswordsForm.pass3 = this.lblPassword3.Text.Trim();
+
             prevPasswordsForm.ShowDialog();
         }
     }

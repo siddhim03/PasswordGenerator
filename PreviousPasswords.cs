@@ -13,9 +13,9 @@ namespace PasswordGenerator
     public partial class PreviousPasswords : Form
     {
         //variables
-        public static string pass1;
-        public static string pass2;
-        public static string pass3;
+        public string pass1 { get; set; }
+        public string pass2 { get; set; }
+        public string pass3 { get; set; }
 
         public PreviousPasswords()
         {
@@ -37,6 +37,13 @@ namespace PasswordGenerator
             this.lblPPassword2.Text = pass2;
 
             this.lblPPassword3.Text = pass3;
+
+            int n = dgvPass.Rows.Add();
+
+            dgvPass.Rows[n].Cells[1].Value = pass1;
+            dgvPass.Rows[n].Cells[1].Value = pass2;
+            dgvPass.Rows[n].Cells[1].Value = pass3;
+
         }
 
         private void setControls()
@@ -46,6 +53,7 @@ namespace PasswordGenerator
             this.MaximizeBox = false;
             this.MinimizeBox = false;
         }
+
     }
         
 }
