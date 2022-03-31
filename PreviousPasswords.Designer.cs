@@ -32,13 +32,12 @@ namespace PasswordGenerator
             this.lblPreviousPasswords = new System.Windows.Forms.Label();
             this.btnExitPrevPwrd = new System.Windows.Forms.Button();
             this.lblYourPreviousPasswords = new System.Windows.Forms.Label();
-            this.lblPPassword3 = new System.Windows.Forms.Label();
-            this.lblPPassword2 = new System.Windows.Forms.Label();
-            this.lblPPassword1 = new System.Windows.Forms.Label();
             this.dgvPass = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvOldPass = new System.Windows.Forms.DataGridView();
+            this.btnImport = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOldPass)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPreviousPasswords
@@ -57,9 +56,9 @@ namespace PasswordGenerator
             this.btnExitPrevPwrd.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnExitPrevPwrd.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Bold);
             this.btnExitPrevPwrd.ForeColor = System.Drawing.Color.White;
-            this.btnExitPrevPwrd.Location = new System.Drawing.Point(617, 356);
+            this.btnExitPrevPwrd.Location = new System.Drawing.Point(302, 390);
             this.btnExitPrevPwrd.Name = "btnExitPrevPwrd";
-            this.btnExitPrevPwrd.Size = new System.Drawing.Size(145, 65);
+            this.btnExitPrevPwrd.Size = new System.Drawing.Size(197, 47);
             this.btnExitPrevPwrd.TabIndex = 4;
             this.btnExitPrevPwrd.Text = "Exit";
             this.btnExitPrevPwrd.UseVisualStyleBackColor = false;
@@ -69,63 +68,53 @@ namespace PasswordGenerator
             // 
             this.lblYourPreviousPasswords.AutoSize = true;
             this.lblYourPreviousPasswords.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYourPreviousPasswords.Location = new System.Drawing.Point(29, 93);
+            this.lblYourPreviousPasswords.Location = new System.Drawing.Point(29, 53);
             this.lblYourPreviousPasswords.Name = "lblYourPreviousPasswords";
             this.lblYourPreviousPasswords.Size = new System.Drawing.Size(235, 25);
             this.lblYourPreviousPasswords.TabIndex = 5;
             this.lblYourPreviousPasswords.Text = "Your Previous Passwords:-";
             // 
-            // lblPPassword3
-            // 
-            this.lblPPassword3.AutoSize = true;
-            this.lblPPassword3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F);
-            this.lblPPassword3.Location = new System.Drawing.Point(29, 222);
-            this.lblPPassword3.Name = "lblPPassword3";
-            this.lblPPassword3.Size = new System.Drawing.Size(108, 25);
-            this.lblPPassword3.TabIndex = 10;
-            this.lblPPassword3.Text = "Password 3";
-            // 
-            // lblPPassword2
-            // 
-            this.lblPPassword2.AutoSize = true;
-            this.lblPPassword2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F);
-            this.lblPPassword2.Location = new System.Drawing.Point(29, 185);
-            this.lblPPassword2.Name = "lblPPassword2";
-            this.lblPPassword2.Size = new System.Drawing.Size(108, 25);
-            this.lblPPassword2.TabIndex = 9;
-            this.lblPPassword2.Text = "Password 2";
-            // 
-            // lblPPassword1
-            // 
-            this.lblPPassword1.AutoSize = true;
-            this.lblPPassword1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F);
-            this.lblPPassword1.Location = new System.Drawing.Point(29, 141);
-            this.lblPPassword1.Name = "lblPPassword1";
-            this.lblPPassword1.Size = new System.Drawing.Size(105, 25);
-            this.lblPPassword1.TabIndex = 8;
-            this.lblPPassword1.Text = "Password 1";
-            // 
             // dgvPass
             // 
             this.dgvPass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPass.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dgvPass.Location = new System.Drawing.Point(156, 141);
+            this.dgvPass.Location = new System.Drawing.Point(65, 142);
             this.dgvPass.Name = "dgvPass";
-            this.dgvPass.Size = new System.Drawing.Size(443, 280);
+            this.dgvPass.Size = new System.Drawing.Size(316, 218);
             this.dgvPass.TabIndex = 11;
             // 
-            // Column1
+            // dgvOldPass
             // 
-            this.Column1.HeaderText = "Password Number";
-            this.Column1.Name = "Column1";
+            this.dgvOldPass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOldPass.Location = new System.Drawing.Point(441, 142);
+            this.dgvOldPass.Name = "dgvOldPass";
+            this.dgvOldPass.Size = new System.Drawing.Size(295, 218);
+            this.dgvOldPass.TabIndex = 12;
             // 
-            // Column2
+            // btnImport
             // 
-            this.Column2.HeaderText = "Password";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 300;
+            this.btnImport.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnImport.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnImport.ForeColor = System.Drawing.Color.White;
+            this.btnImport.Location = new System.Drawing.Point(441, 94);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(295, 42);
+            this.btnImport.TabIndex = 13;
+            this.btnImport.Text = "Import";
+            this.btnImport.UseVisualStyleBackColor = false;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnExport.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Location = new System.Drawing.Point(65, 91);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(316, 42);
+            this.btnExport.TabIndex = 14;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // PreviousPasswords
             // 
@@ -133,10 +122,10 @@ namespace PasswordGenerator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.btnImport);
+            this.Controls.Add(this.dgvOldPass);
             this.Controls.Add(this.dgvPass);
-            this.Controls.Add(this.lblPPassword3);
-            this.Controls.Add(this.lblPPassword2);
-            this.Controls.Add(this.lblPPassword1);
             this.Controls.Add(this.lblYourPreviousPasswords);
             this.Controls.Add(this.btnExitPrevPwrd);
             this.Controls.Add(this.lblPreviousPasswords);
@@ -144,6 +133,7 @@ namespace PasswordGenerator
             this.Text = "Previous Passwords";
             this.Load += new System.EventHandler(this.PreviousPasswords_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOldPass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,11 +144,9 @@ namespace PasswordGenerator
         private System.Windows.Forms.Label lblPreviousPasswords;
         private System.Windows.Forms.Button btnExitPrevPwrd;
         private System.Windows.Forms.Label lblYourPreviousPasswords;
-        private System.Windows.Forms.Label lblPPassword3;
-        private System.Windows.Forms.Label lblPPassword2;
-        private System.Windows.Forms.Label lblPPassword1;
         private System.Windows.Forms.DataGridView dgvPass;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridView dgvOldPass;
+        private System.Windows.Forms.Button btnImport;
+        private System.Windows.Forms.Button btnExport;
     }
 }

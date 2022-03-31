@@ -17,6 +17,17 @@ namespace PasswordGenerator
         public string pass2 { get; set; }
         public string pass3 { get; set; }
 
+        int row0 = 0;
+        int row1 = 1;
+        int row2 = 2;
+
+        int passNum1 = 1;
+        int passNum2 = 2;
+        int passNum3 = 3;
+
+
+        DataTable table = new DataTable("tbl");
+
         public PreviousPasswords()
         {
             InitializeComponent();
@@ -31,19 +42,16 @@ namespace PasswordGenerator
         {
             this.CenterToScreen();
             this.setControls();
+            
 
-            this.lblPPassword1.Text = pass1;
+            table.Columns.Add("Password Number", typeof(int));
+            table.Columns.Add("Password", typeof(string));
 
-            this.lblPPassword2.Text = pass2;
+            table.Rows.Add(passNum1, pass1);
+            table.Rows.Add(passNum2, pass2);
+            table.Rows.Add(passNum3, pass3);
 
-            this.lblPPassword3.Text = pass3;
-
-            int n = dgvPass.Rows.Add();
-
-            dgvPass.Rows[n].Cells[1].Value = pass1;
-            dgvPass.Rows[n].Cells[1].Value = pass2;
-            dgvPass.Rows[n].Cells[1].Value = pass3;
-
+            dgvPass.DataSource = table;
         }
 
         private void setControls()
@@ -54,6 +62,29 @@ namespace PasswordGenerator
             this.MinimizeBox = false;
         }
 
+        private void export()
+        {
+            table.WriteXml(@"C:\siddhi\PasswordGenerator\OldPasswordsXML.xml", XmlWriteMode.WriteSchema);
+            MessageBox.Show("Data Saved To XMl");
+        }
+
+        private void import()
+        {
+            DataTable dt = new DataTable();
+            dt.ReadXml(@"C:\siddhi\PasswordGenerator\OldPasswordsXML.xml");
+            dgvOldPass.DataSource = dt;
+            MessageBox.Show("Data Imported");
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            this.export();
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            this.import();
+        }
     }
         
 }
